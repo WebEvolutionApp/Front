@@ -1,13 +1,14 @@
 import { useState } from "react";
 import "./App.css";
-import Test from "./components/Test/Test";
+import MainPage from "./pages/MainPage/MainPage";
+
 
 function App() {
   const [count, setCount] = useState(0);
 
   return (
     <>
-      <Test />
+<MainPage />
     </>
   );
 }
