@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import s from './styles.module.scss';
 import TextWindow from '../ui/TextWindow/TextWindow';
 import ellipseOne from '../../assets/images/Ellipse1.png';
@@ -7,16 +7,29 @@ import ellipseThree from '../../assets/images/Ellipse3.png';
 import lamp from '../../assets/images/light-bulb.png';
 
 function ReasonsToWorkWithUs() {
-  const [isSwinging, setIsSwinging] = useState(false);
-  const [isLightOn, setIsLightOn] = useState(false);
-
-  const handleClick = () => {
-    setIsSwinging(true);
-    setIsLightOn(!isLightOn); 
-    setTimeout(() => {
-      setIsSwinging(false);
-    }, 1500);
-  };
+    const [isSwinging, setIsSwinging] = useState(false);
+    const [isLightOn, setIsLightOn] = useState(false);
+    const swingTimerRef = useRef(null);
+  
+    const handleClick = () => {
+      if (isSwinging) {
+        return;
+      }
+  
+      setIsSwinging(true);
+  
+      if (isLightOn) {
+        setIsLightOn(false);
+        swingTimerRef.current = setTimeout(() => {
+          setIsSwinging(false);
+        }, 3000);
+      } else {
+        swingTimerRef.current = setTimeout(() => {
+          setIsSwinging(false);
+          setIsLightOn(true);
+        }, 3000);
+      }
+    };
 
   return (
     <div className={s.reasonsToWorkWithUs__container}>
@@ -27,26 +40,22 @@ function ReasonsToWorkWithUs() {
         <div className={s.reasonsToWorkWithUs__mainSection}>
           <div className={s.reasonsToWorkWithUs__mainSection__title}>Причины сотрудничать с нами</div>
           <div className={s.reasonsToWorkWithUs__mainSection__reasons}>
-            <TextWindow
-              customClassName={s.textWindow}
-            > <div className={s.numberWindow}>1.</div>
-                Имеем богатый опыт за спиной
-                 </TextWindow>
-                 <TextWindow
-              customClassName={s.textWindow}
-            > <div className={s.numberWindow}>2.</div>
-                Профессионализм всех специалистов
-                 </TextWindow>
-                 <TextWindow
-              customClassName={s.textWindow}
-            > <div className={s.numberWindow}>3.</div>
-                Находим креативный подход к каждому проекту
-                 </TextWindow>
-                 <TextWindow
-              customClassName={s.textWindow}
-            > <div className={s.numberWindow}>4.</div>
-                Надежное сотрудничество,которое захочется повторить
-                 </TextWindow>
+            <TextWindow customClassName={s.textWindow}>
+              <div className={s.numberWindow}>1.</div>
+              Имеем богатый опыт за спиной
+            </TextWindow>
+            <TextWindow customClassName={s.textWindow}>
+              <div className={s.numberWindow}>2.</div>
+              Профессионализм всех специалистов
+            </TextWindow>
+            <TextWindow customClassName={s.textWindow}>
+              <div className={s.numberWindow}>3.</div>
+              Находим креативный подход к каждому проекту
+            </TextWindow>
+            <TextWindow customClassName={s.textWindow}>
+              <div className={s.numberWindow}>4.</div>
+              Надежное сотрудничество, которое захочется повторить
+            </TextWindow>
           </div>
         </div>
         <div className={s.reasonsToWorkWithUs__animation}>
