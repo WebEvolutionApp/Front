@@ -3,7 +3,7 @@
 @font-face {
   font-family: 'VlaShu';
   src: url('../../../public/fonts/VlaShu/VlaShu.ttf') format('truetype');
-  font-weight: normal;
+  font-weight: 700;
   font-style: normal;
 }
 
@@ -17,19 +17,19 @@
 
 @mixin mulish($font-size, $font-weight, $line-height){
   font-family: "Mulish", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 500;
-  font-style: normal;
+  font-size: $font-size;
+  font-weight: $font-weight;
+  line-height: $line-height;
 }
 
 @mixin fontTitleDec() {
-  @include VlaShu(76px, 500, 120%);
+  @include VlaShu(76px, 700, 120%);
   text-transform: uppercase;
   color: $mainWhite;
-}
+} 
 
 @mixin fontTitleDec2() {
-  @include VlaShu(32px, 500, 120%);
+  @include VlaShu(3vw, 500, 120%);
   text-transform: uppercase;
   color: $mainPink;
 }
@@ -40,6 +40,6 @@
 }
 
 @mixin fontTitleMain() {
-  @include mulish(18px, 500, 120%);
+  @include mulish(1.5vw, 400, 120%);
   color: $mainWhite;
 }
