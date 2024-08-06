@@ -1,0 +1,119 @@
+.reasonsToWorkWithUs {
+  &__container {
+    width: 100%;
+    position: relative;
+    padding-bottom: 5vw;
+
+    &__BgOne {
+        width: 45vw;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+    }
+    &__BgTwo {
+        position: absolute;
+        width: 35vw;
+        left: 26vw;
+        bottom: -6vw;
+        
+    }
+    &__BgThree {
+        position: absolute;
+        right: 3vw;
+        width: 60vw;
+        bottom: -2vw;
+    }
+  }
+
+  &__content {
+    width: 76%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: nowrap;
+  }
+
+  &__mainSection {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+    &__mainSection__title {
+        width: 65%;
+        margin-bottom: 6vw;
+        margin-top: 3vw;
+        @include fontTitleDec2();
+        text-shadow: 
+        0 0 30px rgba(221, 0, 255, .75), 
+        0 0 50px rgba(221, 0, 255, 0.75), 
+        0 0 20px rgba(221, 0, 255, 0.5), 
+        0 0 50px rgba(221, 0, 255, 0.15);
+    }
+
+    &__mainSection__reasons {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 2.5vw;
+    }
+
+    &__animation {
+        z-index: 100;
+    }
+  }
+
+   .textWindow:nth-child(3) {
+   margin-left: 5vw;
+  }
+
+  .textWindow {
+    margin-right: 6vw;
+    width: 21vw;
+    height: 10vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 4vw;
+  }
+
+  .textWindow:nth-child(4) {
+    margin-right: 0;
+   }
+
+  @keyframes swing {
+    0% { transform: rotate(0deg); }
+    10% { transform: rotate(15deg); }
+    20% { transform: rotate(-10deg); }
+    30% { transform: rotate(7deg); }
+    40% { transform: rotate(-7deg); }
+    50% { transform: rotate(5deg); }
+    60% { transform: rotate(-5deg); }
+    70% { transform: rotate(3deg); }
+    80% { transform: rotate(-3deg); }
+    90% { transform: rotate(1deg); }
+    100% { transform: rotate(0deg); }
+  }
+  
+  .reasonsToWorkWithUs__animation img.swing {
+    animation: swing 1.5s ease-in-out;
+    transform-origin: top center;
+  }
+  
+  .reasonsToWorkWithUs__animation img.lamp {
+    display: block;
+    position: relative;
+    z-index: 100;
+    width: 5.5vw;
+  }
+  
+  .reasonsToWorkWithUs__animation img.light {
+    display: none;
+    position: absolute;
+    top: 10vw;
+    right: 6vw;
+    width: 18vw;
+  }
+  
+  .reasonsToWorkWithUs__animation img.light.on {
+    display: block;
+  }
