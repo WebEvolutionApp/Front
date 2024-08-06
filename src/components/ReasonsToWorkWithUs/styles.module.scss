@@ -68,17 +68,25 @@
   }
 
   .textWindow {
+    position: relative;
     margin-right: 6vw;
     width: 21vw;
-    height: 10vw;
+    height: 8vw;
     display: flex;
     justify-content: center;
-    align-items: center;
-    padding-left: 4vw;
+    padding-top: 1.7vw;
+    padding-left: 3vw;
+    padding-right: 2vw;
   }
 
   .textWindow:nth-child(4) {
     margin-right: 0;
+   }
+
+   .numberWindow {
+    position: absolute;
+    top: 1.7vw;
+    left: 1.2vw;
    }
 
   @keyframes swing {

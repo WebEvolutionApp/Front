@@ -55,8 +55,16 @@
 }
 
 .textWindow {
+    position: relative;
     height: 7.5vw;
     margin-bottom: 1.2vw;
     padding-top: 2vw;
     padding-left: 6vw;
+}
+
+.ourServices__logo {
+    position: absolute;
+    top: 2vw;
+    left: 3vw;
+  
 }
