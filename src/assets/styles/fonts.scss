@@ -1,14 +1,44 @@
-@import url("https://fonts.googleapis.com/css2?family=Fira+Sans+Extra+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@200..1000&display=swap");
 
-@mixin fira-sans-extra-condense($font-size, $font-weight, $line-height) {
-  font-family: "Fira Sans Extra Condensed", sans-serif;
+@font-face {
+  font-family: "VlaShu";
+  src: url("../../../public/fonts/VlaShu/VlaShu.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@mixin VlaShu($font-size, $font-weight, $line-height) {
+  font-family: "VlaShu", sans-serif;
   font-size: $font-size;
   font-weight: $font-weight;
   line-height: $line-height;
 }
 
-@mixin fontTitle1() {
-  @include fira-sans-extra-condense(24px, 600, 120%);
+@mixin mulish($font-size, $font-weight, $line-height) {
+  font-family: "Mulish", sans-serif;
+  font-size: $font-size;
+  font-weight: $font-weight;
+  line-height: $line-height;
+}
+
+@mixin fontTitleDec() {
+  @include VlaShu(3.9583vw, 700, 120%);
   text-transform: uppercase;
+  color: $mainWhite;
+}
+
+@mixin fontTitleDec2() {
+  @include VlaShu(3vw, 500, 120%);
+  text-transform: uppercase;
+  color: $mainPink;
+}
+
+@mixin fontTitleHeader() {
+  @include mulish(16px, 400, 120%);
+  color: $mainWhite;
+}
+
+@mixin fontTitleMain() {
+  @include mulish(1.5vw, 400, 120%);
   color: $mainWhite;
 }
