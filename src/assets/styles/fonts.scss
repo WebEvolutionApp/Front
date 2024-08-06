@@ -23,7 +23,7 @@
 }
 
 @mixin fontTitleDec() {
-  @include VlaShu(76px, 700, 120%);
+  @include VlaShu(5vw, 700, 120%);
   text-transform: uppercase;
   color: $mainWhite;
 } 
