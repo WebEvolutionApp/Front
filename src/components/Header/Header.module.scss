@@ -10,6 +10,10 @@
     justify-content: space-between;
     align-items: center;
 
+    .header-logo {
+      width: 10vw;
+    }
+
     .nav-menu {
       display: flex;
       gap: 3.6979vw;
@@ -17,13 +21,17 @@
       .nav-link {
         text-decoration: none;
         color: $mainWhite;
-        @include mulish(0.8333vw, 400, 120%);
+        @include fontTitleHeader();;
       }
     }
 
     .header-socials {
       display: flex;
       gap: 1.1458vw;
+
+      &-img {
+        width: 2vw;
+      }
     }
   }
 }
