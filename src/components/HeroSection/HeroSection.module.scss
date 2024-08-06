@@ -1,0 +1,25 @@
+.container {
+  width: 100%;
+  background-color: $mainBlack;
+
+  .content {
+    padding: 9.32vw 0 12.96vw;
+    width: 76%;
+    margin: 0 auto;
+    display: flex;
+
+    .flex {
+      display: flex;
+      flex-direction: column;
+      gap: 5.26vw;
+    }
+
+    .heading {
+      @include fontTitleDec();
+    }
+
+    .image {
+      width: 31.87vw;
+    }
+  }
+}
