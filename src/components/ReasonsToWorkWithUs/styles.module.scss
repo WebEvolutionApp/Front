@@ -3,6 +3,7 @@
     width: 100%;
     position: relative;
     padding-bottom: 5vw;
+    background-color: $mainBlack;
 
     &__BgOne {
         width: 45vw;
@@ -109,9 +110,9 @@
   .reasonsToWorkWithUs__animation img.light {
     display: none;
     position: absolute;
-    top: 10vw;
-    right: 6vw;
-    width: 18vw;
+    top: 8vw;
+    right: 3vw;
+    width: 25vw;
   }
   
   .reasonsToWorkWithUs__animation img.light.on {
