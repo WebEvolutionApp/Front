@@ -35,7 +35,7 @@
 }
 
 @mixin fontTitleHeader() {
-  @include mulish(16px, 400, 120%);
+  @include mulish(1.3vw, 400, 120%);
   color: $mainWhite;
 }
 

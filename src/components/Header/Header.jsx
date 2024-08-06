@@ -16,8 +16,8 @@ function Header() {
         </nav>
 
         <div className={s['header-socials']}>
-          <a href="#"><img src="./icons/telegram.svg" alt="Telegram" /></a>
-          <a href="#"><img src="./icons/instagram.svg" alt="Instagram" /></a>
+          <a href="#"><img className={s['header-socials-img']} src="./icons/telegram.svg" alt="Telegram" /></a>
+          <a href="#"><img className={s['header-socials-img']} src="./icons/instagram.svg" alt="Instagram" /></a>
         </div>
 
       </div>
