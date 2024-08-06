@@ -4,6 +4,7 @@ import ellipseOne from "../../assets/images/Ellipse1.1.png";
 import ellipseTwo from "../../assets/images/Ellipse2.2.png";
 import ellipseThree from "../../assets/images/Ellipse3.3.png";
 import TextWindow from "../ui/TextWindow/TextWindow";
+import infinite from "../../assets/images/Infinite.png";
 
 export function OurServices() {
   return (
@@ -26,33 +27,39 @@ export function OurServices() {
       <div className={s.ourServices__content}>
         <div className={s.ourServices__title}>Наши услуги</div>
         <div className={s.ourServices__mainSection}>
+          <TextWindow customClassName={s.textWindow} width="31.5vw">
+            <img className={s.ourServices__logo} src={infinite} alt="icon" />
+            &nbsp;Дизайн и разработка сайтов
+          </TextWindow>
+          <TextWindow customClassName={s.textWindow} width="31.5vw">
+            <img className={s.ourServices__logo} src={infinite} alt="icon" />
+            &nbsp;Приложения
+          </TextWindow>
+          <TextWindow customClassName={s.textWindow} width="100%">
+            <img className={s.ourServices__logo} src={infinite} alt="icon" />
+            &nbsp;Порталы и сервисы
+          </TextWindow>
+          <TextWindow customClassName={s.textWindow} width="18.5vw">
+            <img className={s.ourServices__logo} src={infinite} alt="icon" />
+            &nbsp;Логотипы
+          </TextWindow>
+
           <TextWindow
-            windowText="Дизайн и разработка сайтов"
-            customClassName={s.textWindow}
-            width="31.5vw"
-          />
-          <TextWindow windowText="Приложения" 
-          customClassName={s.textWindow} 
-          width="31.5vw"
-          />
-          <TextWindow
-            windowText="Порталы и сервисы"
-            customClassName={s.textWindow}
-            width="100%"
-          />
-          <TextWindow windowText="Логотипы" 
-          customClassName={s.textWindow} 
-          width="18.5vw"
-          />
-          <TextWindow
-            windowText="SEO-продвижение"
             customClassName={s.textWindow}
             width="18.5vw"
-          />
-          <TextWindow windowText="Анимация" 
-          customClassName={s.textWindow} 
-          width="18.5vw"
-          />
+          >
+            <img className={s.ourServices__logo} src={infinite} alt="icon" />
+            &nbsp;SEO-продвижение
+            </TextWindow>
+            <TextWindow
+            customClassName={s.textWindow}
+            width="18.5vw"
+          >
+            <img className={s.ourServices__logo} src={infinite} alt="icon" />
+            &nbsp;Анимация
+            </TextWindow>
+          
+           
         </div>
       </div>
     </div>

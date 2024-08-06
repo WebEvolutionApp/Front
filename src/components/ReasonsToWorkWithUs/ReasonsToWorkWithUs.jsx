@@ -28,21 +28,25 @@ function ReasonsToWorkWithUs() {
           <div className={s.reasonsToWorkWithUs__mainSection__title}>Причины сотрудничать с нами</div>
           <div className={s.reasonsToWorkWithUs__mainSection__reasons}>
             <TextWindow
-              windowText="1. Имеем богатый опыт за спиной"
               customClassName={s.textWindow}
-            />
-            <TextWindow
-              windowText="2. Профессионализм всех специалистов"
+            > <div className={s.numberWindow}>1.</div>
+                Имеем богатый опыт за спиной
+                 </TextWindow>
+                 <TextWindow
               customClassName={s.textWindow}
-            />
-            <TextWindow
-              windowText="3. Находим креативный подход к каждому проекту"
+            > <div className={s.numberWindow}>2.</div>
+                Профессионализм всех специалистов
+                 </TextWindow>
+                 <TextWindow
               customClassName={s.textWindow}
-            />
-            <TextWindow
-              windowText="4. Надежное сотрудничество, которое захочется повторить"
+            > <div className={s.numberWindow}>3.</div>
+                Находим креативный подход к каждому проекту
+                 </TextWindow>
+                 <TextWindow
               customClassName={s.textWindow}
-            />
+            > <div className={s.numberWindow}>4.</div>
+                Надежное сотрудничество,которое захочется повторить
+                 </TextWindow>
           </div>
         </div>
         <div className={s.reasonsToWorkWithUs__animation}>
