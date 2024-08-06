@@ -1,0 +1,62 @@
+.ourServices {
+
+&__container {
+    width: 100%;
+    background-color: $mainBlack;
+    position: relative;
+    margin-top: 6vw;
+    
+
+    &__BgOne {
+        width: 50vw;
+        position: absolute;
+        bottom: -3vw;
+        left: 8vw;
+    }
+
+    &__BgTwo {
+        position: absolute;
+        width: 35vw;
+        left: 32vw;
+        bottom: -4vw;
+        
+    }
+    &__BgThree {
+        position: absolute;
+        right: -15vw;
+        width: 60vw;
+        top: -4vw;
+    }
+}
+
+&__content {
+    width: 76%;
+    margin: 0 auto;
+    margin-bottom: 5vw;
+}
+
+&__title {
+    width: 30%;
+    @include fontTitleDec2();
+        text-shadow: 
+        0 0 30px rgba(221, 0, 255, .75), 
+        0 0 50px rgba(221, 0, 255, 0.75), 
+        0 0 20px rgba(221, 0, 255, 0.5), 
+        0 0 50px rgba(221, 0, 255, 0.15);
+        margin-bottom: 4vw;
+}
+
+&__mainSection {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+}
+
+.textWindow {
+    height: 7.5vw;
+    margin-bottom: 1.2vw;
+    padding-top: 2vw;
+    padding-left: 6vw;
+}
