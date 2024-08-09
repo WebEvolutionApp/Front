@@ -4,7 +4,7 @@ function Header() {
   return (
     <div className={s['container']}>
       <div className={s['content']}>
-        <img className={s['header-logo']} src="./icons/logo-web-evolution.svg" alt="Logo Web Evolution" />
+        <a className={s['header-logo-link']} href="#"><img className={s['header-logo']} src="./icons/logo-web-evolution.svg" alt="Logo Web Evolution" /></a>
 
         <nav className={s['navbar']}>
           <ul className={s['nav-menu']}>
