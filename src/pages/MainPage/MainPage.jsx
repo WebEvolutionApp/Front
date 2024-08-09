@@ -6,6 +6,7 @@ import ReasonsToWorkWithUs from "../../components/ReasonsToWorkWithUs/ReasonsToW
 import OurServices from "../../components/OurServices/OurServices";
 import Header from '../../components/Header/Header';
 import HeroSection from '../../components/HeroSection/HeroSection';
+import Form from "../../components/Form/Form";
 
 export const MainPage = () => {
   return (
@@ -14,6 +15,7 @@ export const MainPage = () => {
       <HeroSection />
       <ReasonsToWorkWithUs />
       <OurServices />
+      <Form />
     </>
   )
 }

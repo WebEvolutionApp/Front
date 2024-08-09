@@ -43,3 +43,14 @@
   @include mulish(1.5vw, 400, 120%);
   color: $mainWhite;
 }
+
+@mixin fontTitleForm() {
+  @include mulish(2.1vw, 600, 160%);
+  color: $mainWhite;
+}
+
+@mixin fontTitleFormInfo() {
+  @include mulish(1.4vw, 500, 160%);
+  color: $formGrey;
+}
+
