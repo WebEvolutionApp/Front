@@ -69,15 +69,16 @@
   }
 
   .textWindow {
+    box-sizing: border-box;
     position: relative;
     margin-right: 6vw;
-    width: 18vw;
-    height: 7.6vw;
+    width: 25.3vw;
+    height: 10vw;
     display: flex;
     justify-content: center;
-    padding-top: 1.7vw;
+    padding-top: 3.1vw;
     padding-left: 3vw;
-    padding-right: 2vw;
+    padding-right: 0.3vw;
   }
 
   .textWindow:nth-child(4) {
@@ -86,7 +87,7 @@
 
    .numberWindow {
     position: absolute;
-    top: 1.7vw;
+    top: 3.1vw;
     left: 1.2vw;
    }
 
