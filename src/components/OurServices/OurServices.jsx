@@ -65,7 +65,6 @@ export function OurServices() {
             autoPlay 
             muted 
             playsInline
-            loop // Добавьте loop если хотите бесконечное воспроизведение
           >
             <source src={title} type="video/mp4" />
             Ваш браузер не поддерживает тег <code>video</code>.
