@@ -1,8 +1,7 @@
 import React from 'react';
 import s from './HeroSection.module.scss';
 import Button from '../ui/Button/Button';
-import img from '../../assets/images/3d_done.gif'
-import title from '../../assets/images/change-your.gif'
+import animation from '../../assets/images/3d_done.mp4'
 
 function HeroSection() {
   const scrollToForm = () => {
@@ -19,7 +18,18 @@ function HeroSection() {
           <h1 className={s['heading']}>Изменим ваше представление <br /> о сайтах</h1>
           <Button text='Оставить заявку' onClick={scrollToForm} />
         </div>
-        <img className={s['image']} src={img} alt="Image" />
+        <div className={s.heroSection__title}>
+          <video 
+            className={s.heroSection__video} 
+            autoPlay 
+            muted 
+            playsInline
+            loop
+          >
+            <source src={animation} type="video/mp4" />
+            Ваш браузер не поддерживает тег <code>video</code>.
+          </video>
+        </div>
       </div>
     </div>
   );
