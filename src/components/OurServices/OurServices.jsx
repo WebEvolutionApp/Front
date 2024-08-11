@@ -6,7 +6,7 @@ import ellipseThree from "../../assets/images/Ellipse3.3.png";
 import ellipseFour from "../../assets/images/Ellipse2.png";
 import TextWindow from "../ui/TextWindow/TextWindow";
 import infinite from "../../assets/images/Infinite.png";
-import title from '../../assets/images/neonTitle.mp4'
+import title from '../../assets/images/neonTitle.mp4';
 
 export function OurServices() {
   const videoRef = useRef(null);
@@ -64,6 +64,8 @@ export function OurServices() {
             className={s.ourServices__video} 
             autoPlay 
             muted 
+            playsInline
+            loop // Добавьте loop если хотите бесконечное воспроизведение
           >
             <source src={title} type="video/mp4" />
             Ваш браузер не поддерживает тег <code>video</code>.
