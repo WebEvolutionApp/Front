@@ -36,31 +36,13 @@
 }
 
 &__title {
-    width: 30%;
-    white-space: nowrap;
-    overflow: hidden;
-    border-right: 2px solid;
-    @include fontTitleDec2();
-    text-shadow: 
-      0 0 30px rgba(221, 0, 255, .75), 
-      0 0 50px rgba(221, 0, 255, 0.75), 
-      0 0 20px rgba(221, 0, 255, 0.5), 
-      0 0 50px rgba(221, 0, 255, 0.15);
-    margin-bottom: 4vw;
-  }
+   
 
-  @keyframes typing {
-    from { width: 0; }
-    to { width: 35%; }
-  }
-
-  @keyframes blink-caret {
-    30% { border-color: transparent; }
-  }
-
-  &__title.typingActive {
-    animation: typing 3s steps(30) 1s 1 normal both, blink-caret 0.75s step-end infinite;
-  }
+    &Img {
+        width: 30vw;
+        transform: translateX(-5vw);
+    }
+}
 
 
 
