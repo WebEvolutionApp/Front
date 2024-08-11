@@ -54,3 +54,7 @@
   color: $formGrey;
 }
 
+@mixin fontTitleFormInfo2() {
+  @include mulish(1.2vw, 500, 160%);
+  color: $formGrey;
+}

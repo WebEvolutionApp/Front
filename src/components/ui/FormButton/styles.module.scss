@@ -1,0 +1,11 @@
+.custom__formButton {
+    background: linear-gradient(
+        to right,
+        #6E24A8 0%,
+        #8F01FE 50%,
+        #6E24A8 100%
+      );
+      border: none;
+    @include fontTitleFormInfo();
+    cursor: pointer;
+}

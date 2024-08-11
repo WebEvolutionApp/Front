@@ -3,6 +3,37 @@
     &__container {
         width: 100%;
         margin-top: 10vw;
+        position: relative;
+
+        &__BgOne {
+            width: 47vw;
+            position: absolute;
+            left: -17vw;
+            bottom: -13vw;
+
+        }
+
+        &__BgTwo {
+            width: 50vw;
+            position: absolute;
+            left: 15vw;
+            top: -18vw;
+        }
+
+        &__BgThree {
+            width: 70vw;
+            position: absolute;
+            left: 54vw;
+            top: -18vw;
+
+        }
+
+        &__BgFour {
+            width: 55vw;
+            position: absolute;
+            bottom: -25vw;
+            left: 56vw;
+        }
     }
   
     &__content {
@@ -47,16 +78,68 @@
     }
 
     &__requiredFields {
-        @include fontTitleHeader();
+        @include fontTitleFormInfo2();
+        margin-top: 2vw;
+        margin-bottom: 2vw;
     }
 }
-
 .checkboxLabel {
-    @include fontTitleHeader();
-}
-.checkbox {
-    width: 2.5vw;
-    height: 2.5vw;
+    @include fontTitleFormInfo();
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+    position: relative; 
+    
+  }
+  
+  .checkbox {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+   
+  }
+  
+  .checkboxLabel::before {
+    content: '';
+    width: 2.8vw;
+    height: 2.8vw;
+    border-radius: 0.5vw;
     background-color: transparent;
-    border-radius: 10px;
-}
+    border: 1px solid #8d8d8d;
+    display: inline-block;
+    margin-right: 1vw;
+    transition: all 0.3s ease;
+    margin-right: 1vw;
+  }
+  
+  .checkboxLabel::after {
+    content: '';
+    width: 0.6vw;
+    height: 1.1vw;
+    border: solid $mainViolet;
+    border-width: 0 0.2vw 0.2vw 0;
+    display: inline-block;
+    position: absolute;
+    top: 0.6vw;
+    left: 1vw;
+    transform: rotate(45deg);
+    opacity: 1;
+    transition: opacity 0.3s ease;
+  }
+  
+  .checkbox:checked + .checkboxLabel::before {
+    background-color: #1A1A1A;
+    border-color: #d400ff; 
+  }
+  
+  .checkbox:checked + .checkboxLabel::after {
+    opacity: 1;
+  }
+  
+
+  .formBtn {
+    margin: 2.3vw 0 5vw 0;
+    width: 38vw;
+    height: 5.5vw;
+    z-index: 15;
+  }
