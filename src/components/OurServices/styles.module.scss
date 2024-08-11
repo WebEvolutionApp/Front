@@ -88,3 +88,13 @@
     width: 2vw;
 }
 
+.ourServices__video {
+    width: 40%;
+    height: auto;  
+    object-fit: cover; 
+    border: none;
+    outline: none;
+    background: transparent;
+    display: block; 
+    transform: translateX(-6vw);
+  }
