@@ -6,7 +6,7 @@ import ellipseThree from "../../assets/images/Ellipse3.3.png";
 import ellipseFour from "../../assets/images/Ellipse2.png";
 import TextWindow from "../ui/TextWindow/TextWindow";
 import infinite from "../../assets/images/Infinite.png";
-import title from '../../assets/images/neonTitle.mp4';
+import title from '../../assets/images/our-services.gif';
 
 export function OurServices() {
   const videoRef = useRef(null);
@@ -59,16 +59,7 @@ export function OurServices() {
       />
       <div className={s.ourServices__content}>
         <div className={s.ourServices__title}>
-          <video 
-            ref={videoRef}
-            className={s.ourServices__video} 
-            autoPlay 
-            muted 
-            playsInline
-          >
-            <source src={title} type="video/mp4" />
-            Ваш браузер не поддерживает тег <code>video</code>.
-          </video>
+          <img className={s.ourServices__titleImg} src={title} alt="title" />
         </div>
         <div className={s.ourServices__mainSection}>
           <div className={s.ourServices__sectionOne}>

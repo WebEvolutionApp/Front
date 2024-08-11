@@ -1,6 +1,8 @@
 import React from 'react';
 import s from './HeroSection.module.scss';
 import Button from '../ui/Button/Button';
+import img from '../../assets/images/3d_done.gif'
+import title from '../../assets/images/change-your.gif'
 
 function HeroSection() {
   const scrollToForm = () => {
@@ -17,11 +19,10 @@ function HeroSection() {
           <h1 className={s['heading']}>Изменим ваше представление <br /> о сайтах</h1>
           <Button text='Оставить заявку' onClick={scrollToForm} />
         </div>
-        <img className={s['image']} src="./images/neon-abstract-shapes.svg" alt="Image" />
+        <img className={s['image']} src={img} alt="Image" />
       </div>
     </div>
   );
 }
 
 export default HeroSection;
-

@@ -21,3 +21,8 @@
     }
   }
   
+  @media only screen and (max-width: 576px) {
+    .nav-link {
+      @include fontTitleHeaderMedia();
+    }
+  }

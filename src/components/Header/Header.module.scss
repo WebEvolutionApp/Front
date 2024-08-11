@@ -1,7 +1,6 @@
 .container {
   width: 100%;
-  background-color: $mainBlack;
-
+}
   .content {
     padding: 0.4688vw 0 0.4688vw 0;
     width: 76%;
@@ -9,7 +8,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-
+  }
     .header-logo {
       width: 8vw;
     }
@@ -19,13 +18,25 @@
       gap: 1.1458vw;
 
       &-img {
-        width: 2vw;
+        width: 3vw;
       }
     }
-  }
-}
 
 .headerNavbar__Menu {
   display: flex;
   gap: 3.6979vw;
+}
+
+
+@media only screen and (max-width: 576px) {
+  .content {
+    width: 90%;
+  }
+  .header-logo {
+    width: 12vw;
+  }
+  .header-socials-img {
+      width: 5vw;
+    }
+  
 }

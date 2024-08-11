@@ -2,6 +2,8 @@
     width: 100%;
     background-color: $mainBlack;
     margin-bottom: 7vw;
+    margin-top: 3vw;
+}
   
     .content {
       padding: 0.4688vw 0 0.4688vw 0;
@@ -9,29 +11,39 @@
       margin: 0 auto;
       display: flex;
       justify-content: space-between;
+    }
      
-
-  
       .header-logo {
         width: 8vw;
       }
-  
-    
-  
+
       .header-socials {
         display: flex;
         gap: 1.1458vw;
         z-index: 20;
+      
   
         &-img {
-          width: 2.5vw;
+          width: 3vw;
         }
       }
-    }
-  }
+  
 
   .footerNavbar__Menu{
     display: flex;
     flex-direction: column;
     gap: 3vw;
+  }
+
+  @media only screen and (max-width: 576px) {
+    .content {
+      width: 90%;
+    }
+    .header-logo {
+      width: 12vw;
+    }
+    .header-socials-img {
+        width: 5vw;
+      }
+    
   }

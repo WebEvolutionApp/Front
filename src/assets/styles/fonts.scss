@@ -65,7 +65,7 @@
 
 
 @mixin fontTitleDecMedia() {
-  @include VlaShu(7vw, 700, 120%);
+  @include VlaShu(8vw, 700, 120%);
   text-transform: uppercase;
   color: $mainWhite;
 } 
@@ -97,5 +97,10 @@
 
 @mixin fontTitleFormInfoBtnMedia() {
   @include mulish(5.7vw, 400, 160%);
+  color: $mainWhite;
+}
+
+@mixin fontTitleHeaderMedia() {
+  @include mulish(2.3vw, 400, 120%);
   color: $mainWhite;
 }
