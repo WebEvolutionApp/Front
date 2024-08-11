@@ -32,7 +32,7 @@ export function OurServices() {
   }, []);
 
   return (
-    <div className={s.ourServices__container}>
+    <div id="services" className={s.ourServices__container}>
       <img
         className={s.ourServices__container__BgOne}
         src={ellipseThree}
