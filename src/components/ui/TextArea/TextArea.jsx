@@ -2,11 +2,12 @@ import React, { useState } from 'react';
 import s from './styles.module.scss';
 import classNames from 'classnames';
 
-const Input = ({ 
+const TextArea = ({ 
   placeholder = 'Введите текст', 
   customClassName, 
   width, 
-  height 
+  height,
+  maxLength 
 }) => {
   const [value, setValue] = useState('');
 
@@ -15,9 +16,9 @@ const Input = ({
   };
 
   return (
-    <input
+    <textarea
       className={classNames(
-        s.custom__input, 
+        s.custom__textarea, 
         customClassName, 
         { [s.filled]: value } 
       )}
@@ -25,10 +26,9 @@ const Input = ({
       placeholder={placeholder}
       value={value}
       onChange={handleChange}
+      maxLength={maxLength}  
     />
   );
 };
 
-export default Input;
-
-
+export default TextArea;
