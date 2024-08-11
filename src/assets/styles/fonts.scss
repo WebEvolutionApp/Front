@@ -23,7 +23,7 @@
 }
 
 @mixin fontTitleDec() {
-  @include VlaShu(5vw, 700, 120%);
+  @include VlaShu(4.4vw, 700, 120%);
   text-transform: uppercase;
   color: $mainWhite;
 } 
@@ -55,6 +55,6 @@
 }
 
 @mixin fontTitleFormInfo2() {
-  @include mulish(1.2vw, 500, 160%);
+  @include mulish(1.1vw, 400, 160%);
   color: $formGrey;
 }
