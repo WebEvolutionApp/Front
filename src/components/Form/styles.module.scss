@@ -1,146 +1,227 @@
 .form {
+  &__container {
+    width: 100%;
+    margin-top: 10vw;
+    position: relative;
 
-    &__container {
-        width: 100%;
-        margin-top: 10vw;
-        position: relative;
-
-        &__BgOne {
-            width: 47vw;
-            position: absolute;
-            left: -17vw;
-            bottom: -13vw;
-
-        }
-
-        &__BgTwo {
-            width: 50vw;
-            position: absolute;
-            left: 15vw;
-            top: -18vw;
-        }
-
-        &__BgThree {
-            width: 70vw;
-            position: absolute;
-            left: 54vw;
-            top: -18vw;
-
-        }
-
-        &__BgFour {
-            width: 55vw;
-            position: absolute;
-            bottom: -25vw;
-            left: 56vw;
-        }
-    }
-  
-    &__content {
-        width: 76%;
-        margin: 0 auto;
-        margin-bottom: 5vw;
-    }
-    &__title {
-        @include fontTitleDec2();
-        margin-bottom: 5vw;
-    }
-    &__formWindow {
-        box-sizing: border-box;
-        width: 100%;
-        margin: 0 auto;
-        border-radius: 1.2vw;
-        border: 1px solid rgba($mainViolet, 0.8);
-        box-shadow: inset 0 0 7vw 1vw rgba(150, 0, 255, 0.4); 
-        display: flex;
-        flex-direction: column;
-        padding-left: 4vw;
-        padding-right: 4vw;
+    &__BgOne {
+      width: 47vw;
+      position: absolute;
+      left: -17vw;
+      bottom: -13vw;
     }
 
-    &__formTitle {
-        margin-top: 6vw;
-        margin-bottom: 4vw;
-        @include fontTitleForm();
-        width: 37vw;
+    &__BgTwo {
+      width: 50vw;
+      position: absolute;
+      left: 15vw;
+      top: -18vw;
     }
 
-    &__inputsSection {
-        display: flex;
-        flex-wrap: nowrap;
-        justify-content: space-between;
+    &__BgThree {
+      width: 70vw;
+      position: absolute;
+      left: 54vw;
+      top: -18vw;
     }
 
-    &__userInfo {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between
+    &__BgFour {
+      width: 55vw;
+      position: absolute;
+      bottom: -25vw;
+      left: 56vw;
     }
+  }
 
-    &__requiredFields {
-        @include fontTitleFormInfo2();
-        margin-top: 2vw;
-        margin-bottom: 2vw;
-    }
+  &__content {
+    width: 76%;
+    margin: 0 auto;
+    margin-bottom: 5vw;
+  }
+  &__title {
+    @include fontTitleDec2();
+    margin-bottom: 5vw;
+  }
+  &__formWindow {
+    box-sizing: border-box;
+    width: 100%;
+    margin: 0 auto;
+    border-radius: 1.2vw;
+    border: 1px solid rgba($mainViolet, 0.8);
+    box-shadow: inset 0 0 7vw 1vw rgba(150, 0, 255, 0.4);
+    display: flex;
+    flex-direction: column;
+    padding-left: 4vw;
+    padding-right: 4vw;
+  }
+
+  &__formTitle {
+    margin-top: 6vw;
+    margin-bottom: 4vw;
+    @include fontTitleForm();
+    width: 37vw;
+  }
+
+  &__inputsSection {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    height: 15vw;
+  }
+
+  &__userInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 2.5vw;
+  }
+
+  &__requiredFields {
+    @include fontTitleFormInfo2();
+    margin-top: 2vw;
+    margin-bottom: 2vw;
+  }
 }
 .checkboxLabel {
-    @include fontTitleFormInfo();
-    display: inline-flex;
-    align-items: center;
-    cursor: pointer;
-    position: relative; 
-    
+  @include fontTitleFormInfo();
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+}
+
+.checkbox {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.checkboxLabel::before {
+  content: "";
+  width: 2.8vw;
+  height: 2.8vw;
+  border-radius: 0.5vw;
+  background-color: transparent;
+  border: 1px solid #8d8d8d;
+  display: inline-block;
+  margin-right: 1vw;
+  transition: all 0.3s ease;
+  margin-right: 1vw;
+}
+
+.checkboxLabel::after {
+  content: "";
+  width: 0.6vw;
+  height: 1.1vw;
+  border: solid $mainViolet;
+  border-width: 0 0.2vw 0.2vw 0;
+  display: inline-block;
+  position: absolute;
+  top: 0.6vw;
+  left: 1vw;
+  transform: rotate(45deg);
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+.checkbox:checked + .checkboxLabel::before {
+  background-color: #1a1a1a;
+  border-color: #d400ff;
+}
+
+.checkbox:checked + .checkboxLabel::after {
+  opacity: 1;
+}
+
+.formBtn {
+  margin: 2.3vw 0 5vw 0;
+  width: 38vw;
+  height: 5.5vw;
+  z-index: 15;
+}
+
+.inputText {
+  width: 38vw;
+}
+
+.input {
+  width: 26vw;
+}
+
+@media only screen and (max-width: 576px) {
+  .form__inputsSection {
+    flex-direction: column;
+    gap: 4vw;
   }
-  
-  .checkbox {
-    position: absolute;
-    opacity: 0;
-    cursor: pointer;
-   
+  .form__userInfo {
+    gap: 4vw;
   }
-  
+  .form__inputsSection {
+    height: auto;
+  }
+  .form__content {
+    width: 90%;
+  }
+  .inputText {
+    width: 100%;
+    height: 35vw;
+  }
+
+  .input {
+    width: 100%;
+    height: 15vw;
+  }
+  .form__requiredFields {
+    @include fontTitleFormInfoMedia2();
+  }
+  .checkboxLabel {
+    margin-top: 3vw;
+    @include fontTitleFormInfoMedia2();
+  }
+
   .checkboxLabel::before {
-    content: '';
-    width: 2.8vw;
-    height: 2.8vw;
-    border-radius: 0.5vw;
-    background-color: transparent;
-    border: 1px solid #8d8d8d;
-    display: inline-block;
-    margin-right: 1vw;
-    transition: all 0.3s ease;
-    margin-right: 1vw;
+    content: "";
+    width: 6vw;
+    height: 6vw;
+    border-radius: 0.9vw;
+    margin-right: 3vw;
   }
-  
+
   .checkboxLabel::after {
-    content: '';
-    width: 0.6vw;
-    height: 1.1vw;
-    border: solid $mainViolet;
-    border-width: 0 0.2vw 0.2vw 0;
-    display: inline-block;
-    position: absolute;
-    top: 0.6vw;
-    left: 1vw;
-    transform: rotate(45deg);
-    opacity: 1;
-    transition: opacity 0.3s ease;
+    width: 2.2vw;
+    height: 4.3vw;
+    border-width: 0 0.5vw 0.5vw 0;
+    top: 0.1vw;
+    left: 1.9vw;
   }
-  
-  .checkbox:checked + .checkboxLabel::before {
-    background-color: #1A1A1A;
-    border-color: #d400ff; 
-  }
-  
-  .checkbox:checked + .checkboxLabel::after {
-    opacity: 1;
-  }
-  
 
   .formBtn {
-    margin: 2.3vw 0 5vw 0;
-    width: 38vw;
-    height: 5.5vw;
-    z-index: 15;
+    margin: 2.3vw 0 10vw 0;
+    width: 100%;
+    height: 15vw;
   }
-
+  .form__formTitle {
+    @include fontTitleMainMedia();
+    width: 75%;
+  }
+  .form__container__BgOne {
+    top: -30vw;
+    width: 90vw;
+    left: -40vw;
+  }
+  .form__container__BgTwo {
+    top: 10vw;
+    width: 70vw;
+    left: 46vw;
+  }
+  .form__container__BgThree {
+    top: 40vw;
+    width: 110vw;
+    left: -40vw;
+  }
+  .form__container__BgFour {
+    bottom: -40vw;
+    width: 110vw;
+    left: -5vw;
+  }
+}

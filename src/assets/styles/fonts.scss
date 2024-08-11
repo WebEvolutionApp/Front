@@ -58,3 +58,44 @@
   @include mulish(1.1vw, 400, 160%);
   color: $formGrey;
 }
+
+
+
+
+
+
+@mixin fontTitleDecMedia() {
+  @include VlaShu(7vw, 700, 120%);
+  text-transform: uppercase;
+  color: $mainWhite;
+} 
+
+@mixin fontTitleMainBtnMedia() {
+  @include mulish(5vw, 400, 120%);
+  color: $mainWhite;
+}
+
+@mixin fontTitleMainMedia() {
+  @include mulish(3.6vw, 300, 120%);
+  color: $mainWhite;
+}
+
+@mixin fontTitleFormMedia() {
+  @include mulish(2.1vw, 600, 160%);
+  color: $mainWhite;
+}
+
+@mixin fontTitleFormInfoMedia() {
+  @include mulish(3.8vw, 400, 160%);
+  color: $formGrey;
+}
+
+@mixin fontTitleFormInfoMedia2() {
+  @include mulish(3vw, 400, 160%);
+  color: $formGrey;
+}
+
+@mixin fontTitleFormInfoBtnMedia() {
+  @include mulish(5.7vw, 400, 160%);
+  color: $mainWhite;
+}

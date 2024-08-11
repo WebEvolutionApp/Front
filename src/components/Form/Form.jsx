@@ -23,23 +23,17 @@ export function Form() {
               <TextArea
                 placeholder="Имя*"
                 customClassName={s.input}
-                width="25vw"
-                height={"6vw"}
                 maxLength={100}  
               />
               <TextArea
                 placeholder="E-mail*"
                 customClassName={s.input}
-                width="25vw"
-                height={"6vw"}
                 maxLength={100}  
               />
             </div>
             <TextArea
               placeholder="Опишите вашу идею"
-              customClassName={s.input}
-              width="38vw"
-              height={"14.5vw"}
+              customClassName={s.inputText}
               maxLength={1000}  
             />
           </div>

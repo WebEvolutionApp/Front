@@ -136,3 +136,68 @@
     position: absolute;
     width: 3.7vw;
   }
+
+
+  @media only screen and (max-width: 576px) {
+    .reasonsToWorkWithUs__mainSection__reasons {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .textWindow:nth-child(3) {
+      margin-left: 0vw;
+     }
+
+     .textWindow {
+      width: 80%;
+      height: 25vw;
+      padding-top: 8vw;
+      padding-left: 9vw;
+      padding-right: 3vw;
+     }
+
+     .reasonsToWorkWithUs__content {
+      width: 90%;
+     }
+
+     .numberWindow {
+      top: 8vw;
+      left: 5vw;
+     }
+
+     .lampUpperPart {
+      top: -1vw;
+      right: 1vw;
+      position: absolute;
+      width: 7vw;
+    }
+    .reasonsToWorkWithUs__animation {
+      z-index: 100;
+      margin-top: 1vw;
+      transform: translateX(-8vw);
+  }
+  .reasonsToWorkWithUs__animation img.lamp {
+    width: 9vw;
+  }
+  
+  .reasonsToWorkWithUs__animation img.light {
+    top: 12vw;
+    right: -15vw;
+    width: 40vw;
+  }
+  .reasonsToWorkWithUs__container__BgOne {
+   display: none;
+}
+.reasonsToWorkWithUs__container__BgTwo {
+    position: absolute;
+    width: 50vw;
+    left: -10vw;
+    top: 6vw;
+    
+}
+.reasonsToWorkWithUs__container__BgThree {
+    right: -30vw;
+    width: 120vw;
+    top: 1vw;
+}
+  }

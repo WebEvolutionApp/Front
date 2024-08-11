@@ -18,11 +18,25 @@
     }
 
     .heading {
-      @include fontTitleDec();
+  
     }
 
     .image {
       height: 38vw;
     }
+  }
+}
+
+
+@media only screen and (max-width: 576px) {
+  .heading {
+    @include fontTitleDecMedia();
+  }
+	.image {
+    display: none;
+  }
+
+  .content {
+    width: 100%;
   }
 }

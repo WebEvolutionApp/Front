@@ -12,3 +12,19 @@
     }
 }
   
+@media only screen and (max-width: 576px) { 
+    
+    .custom__textWindow {
+        @include fontTitleMainMedia();
+        border-radius: 3vw;
+        border: 0.1vw solid rgba($mainViolet, 0.8);
+        box-shadow: inset 0 0 13vw 1vw rgba(150, 0, 255, 0.4); 
+
+        &:hover {
+            box-shadow: inset 0 0 16vw 1vw rgba(150, 0, 255, 0.7); 
+            transition: box-shadow 0.5s ease, background-color 0.5s ease, height 0.5s ease;
+        }
+    }
+
+
+}
