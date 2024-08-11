@@ -5,6 +5,7 @@ import ellipseTwo from "../../assets/images/Ellipse2.2.png";
 import ellipseThree from "../../assets/images/Ellipse3.3.png";
 import TextWindow from "../ui/TextWindow/TextWindow";
 import infinite from "../../assets/images/Infinite.png";
+import title from '../../assets/images/neon-title.gif'
 
 export function OurServices() {
   const titleRef = useRef(null);
@@ -48,7 +49,7 @@ export function OurServices() {
         alt=""
       />
       <div className={s.ourServices__content}>
-        <div ref={titleRef} className={s.ourServices__title}>Наши услуги...</div>
+        <div className={s.ourServices__title}> <img className={s.ourServices__titleImg} src={title} alt="" /></div>
         <div className={s.ourServices__mainSection}>
           <div className={s.ourServices__sectionOne}>
             <TextWindow customClassName={s.textWindow} width="31.5vw">
