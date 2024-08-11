@@ -1,6 +1,6 @@
 import React from "react";
 import s from "./styles.module.scss";
-import Input from "../ui/Input/Input";
+import TextArea from "../ui/TextArea/TextArea";
 import FormButton from "../ui/FormButton/FormButton";
 import ellipseOne from "../../assets/images/Ellipse3.png";
 import ellipseTwo from "../../assets/images/Ellipse2.png";
@@ -20,24 +20,25 @@ export function Form() {
           </div>
           <div className={s.form__inputsSection}>
             <div className={s.form__userInfo}>
-              <Input
+              <TextArea
                 placeholder="Имя*"
                 customClassName={s.input}
                 width="25vw"
                 height={"6vw"}
               />
-              <Input
+              <TextArea
                 placeholder="E-mail*"
                 customClassName={s.input}
                 width="25vw"
                 height={"6vw"}
               />
             </div>
-            <Input
+            <TextArea
               placeholder="Опишите вашу идею"
               customClassName={s.input}
               width="38vw"
               height={"14.5vw"}
+              maxLength={1000}  
             />
           </div>
           <div className={s.form__requiredFields}>
