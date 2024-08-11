@@ -5,28 +5,31 @@ import ellipseTwo from "../../assets/images/Ellipse2.2.png";
 import ellipseThree from "../../assets/images/Ellipse3.3.png";
 import TextWindow from "../ui/TextWindow/TextWindow";
 import infinite from "../../assets/images/Infinite.png";
-import title from '../../assets/images/neon-title.gif'
+import title from '../../assets/images/neonTitle.mp4'
 
 export function OurServices() {
-  const titleRef = useRef(null);
+  const videoRef = useRef(null);
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
+    const handlePlayPause = (entries) => {
+      entries.forEach(entry => {
         if (entry.isIntersecting) {
-          titleRef.current.classList.add(s.typingActive);
+          videoRef.current.play();
+        } else {
+          videoRef.current.pause();
         }
-      },
-      { threshold: 0.5 }
-    );
+      });
+    };
 
-    if (titleRef.current) {
-      observer.observe(titleRef.current);
+    const observer = new IntersectionObserver(handlePlayPause, { threshold: 0.5 });
+    
+    if (videoRef.current) {
+      observer.observe(videoRef.current);
     }
 
     return () => {
-      if (titleRef.current) {
-        observer.unobserve(titleRef.current);
+      if (videoRef.current) {
+        observer.unobserve(videoRef.current);
       }
     };
   }, []);
@@ -49,7 +52,17 @@ export function OurServices() {
         alt=""
       />
       <div className={s.ourServices__content}>
-        <div className={s.ourServices__title}> <img className={s.ourServices__titleImg} src={title} alt="" /></div>
+        <div className={s.ourServices__title}>
+          <video 
+            ref={videoRef}
+            className={s.ourServices__video} 
+            autoPlay 
+            muted 
+          >
+            <source src={title} type="video/mp4" />
+            Ваш браузер не поддерживает тег <code>video</code>.
+          </video>
+        </div>
         <div className={s.ourServices__mainSection}>
           <div className={s.ourServices__sectionOne}>
             <TextWindow customClassName={s.textWindow} width="31.5vw">
