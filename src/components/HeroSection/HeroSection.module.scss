@@ -1,6 +1,7 @@
 .container {
   width: 100%;
   background-color: $mainBlack;
+  overflow: hidden;
 
   .content {
     padding: 6vw 0 12.96vw;
