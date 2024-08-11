@@ -60,6 +60,7 @@
 
     &__animation {
         z-index: 100;
+        margin-top: 1vw;
     }
   }
 
@@ -119,11 +120,18 @@
   .reasonsToWorkWithUs__animation img.light {
     display: none;
     position: absolute;
-    top: 8vw;
-    right: 3vw;
-    width: 25vw;
+    top: 7vw;
+    right: 1.2vw;
+    width: 28vw;
   }
   
   .reasonsToWorkWithUs__animation img.light.on {
     display: block;
+  }
+
+  .lampUpperPart {
+    top: 0;
+    right: 13vw;
+    position: absolute;
+    width: 3.7vw;
   }

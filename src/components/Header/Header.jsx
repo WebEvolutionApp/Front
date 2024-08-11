@@ -1,4 +1,5 @@
 import s from './Header.module.scss';
+import Links from '../ui/Links/Links';
 
 function Header() {
   return (
@@ -7,12 +8,7 @@ function Header() {
         <a className={s['header-logo-link']} href="#"><img className={s['header-logo']} src="./icons/logo-web-evolution.svg" alt="Logo Web Evolution" /></a>
 
         <nav className={s['navbar']}>
-          <ul className={s['nav-menu']}>
-            <li className={s['nav-item']}><a className={s['nav-link']} href="#">Этапы работы</a></li>
-            <li className={s['nav-item']}><a className={s['nav-link']} href="#">Услуги</a></li>
-            <li className={s['nav-item']}><a className={s['nav-link']} href="#">О нас</a></li>
-            <li className={s['nav-item']}><a className={s['nav-link']} href="#">Контакты</a></li>
-          </ul>
+          <Links menuStyle={s.headerNavbar__Menu} /> 
         </nav>
 
         <div className={s['header-socials']}>

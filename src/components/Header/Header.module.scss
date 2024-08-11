@@ -14,17 +14,6 @@
       width: 8vw;
     }
 
-    .nav-menu {
-      display: flex;
-      gap: 3.6979vw;
-
-      .nav-link {
-        text-decoration: none;
-        color: $mainWhite;
-        @include fontTitleHeader();;
-      }
-    }
-
     .header-socials {
       display: flex;
       gap: 1.1458vw;
@@ -34,4 +23,9 @@
       }
     }
   }
+}
+
+.headerNavbar__Menu {
+  display: flex;
+  gap: 3.6979vw;
 }

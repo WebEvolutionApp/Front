@@ -7,7 +7,7 @@ import ellipseTwo from "../../assets/images/Ellipse2.png";
 
 export function Form() {
   return (
-    <div className={s.form__container}>
+    <div id="form" className={s.form__container}> {/* Добавлено id */}
       <img className={s.form__container__BgOne} src={ellipseOne} alt="" />
       <img className={s.form__container__BgTwo} src={ellipseTwo} alt="" />
       <img className={s.form__container__BgThree} src={ellipseOne} alt="" />
@@ -25,12 +25,14 @@ export function Form() {
                 customClassName={s.input}
                 width="25vw"
                 height={"6vw"}
+                maxLength={100}  
               />
               <TextArea
                 placeholder="E-mail*"
                 customClassName={s.input}
                 width="25vw"
                 height={"6vw"}
+                maxLength={100}  
               />
             </div>
             <TextArea

@@ -4,7 +4,8 @@ import TextWindow from '../ui/TextWindow/TextWindow';
 import ellipseOne from '../../assets/images/Ellipse1.png';
 import ellipseTwo from '../../assets/images/Ellipse2.png';
 import ellipseThree from '../../assets/images/Ellipse3.png';
-import lamp from '../../assets/images/light-bulb.png';
+import lampUpperPart from '../../assets/images/lamp-upper-part.png';
+import lamp from '../../assets/images/lamp.png';
 
 function ReasonsToWorkWithUs() {
     const [isSwinging, setIsSwinging] = useState(false);
@@ -59,10 +60,11 @@ function ReasonsToWorkWithUs() {
           </div>
         </div>
         <div className={s.reasonsToWorkWithUs__animation}>
+          <img src={lampUpperPart} className={s.lampUpperPart} alt="" />
           <img
             src={lamp}
             alt="img"
-            onClick={handleClick}
+            onMouseEnter={handleClick}
             className={`${s.lamp} ${isSwinging ? s.swing : ''}`}
           />
           <img
