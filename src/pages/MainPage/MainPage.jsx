@@ -7,6 +7,7 @@ import OurServices from "../../components/OurServices/OurServices";
 import Header from '../../components/Header/Header';
 import HeroSection from '../../components/HeroSection/HeroSection';
 import Form from "../../components/Form/Form";
+import OurTeam from '../../components/OurTeam/OurTeam';
 
 export const MainPage = () => {
   return (
@@ -15,6 +16,7 @@ export const MainPage = () => {
       <HeroSection />
       <ReasonsToWorkWithUs />
       <OurServices />
+      <OurTeam />
       <Form />
     </>
   )
