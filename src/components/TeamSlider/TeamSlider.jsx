@@ -5,6 +5,26 @@ import { teamArray } from './teamArray.data';
 
 import Slider from "react-slick";
 
+function NextArrow({ onClick }) {
+  return (
+    <div
+      className={s['next-arrow']}
+      style={{ display: "block" }}
+      onClick={onClick}
+    />
+  );
+}
+
+function PrevArrow({ onClick }) {
+  return (
+    <div
+      className={s['prev-arrow']}
+      style={{ display: "block" }}
+      onClick={onClick}
+    />
+  );
+}
+
 function TeamSlider({ width, onSlideChange }) {
   const settings = {
     infinite: true,
@@ -14,12 +34,12 @@ function TeamSlider({ width, onSlideChange }) {
     verticalSwiping: true,
     swipeToSlide: true,
     autoplay: true,
-    autoplaySpeed: 3000,
-    beforeChange: function (_, next) {
+    autoplaySpeed: 5000,
+    nextArrow: <NextArrow />,
+    prevArrow: <PrevArrow />,
+    beforeChange: function (current, next) {
       onSlideChange(next);
     },
-    afterChange: function (currentSlide) {
-    }
   };
 
   return (

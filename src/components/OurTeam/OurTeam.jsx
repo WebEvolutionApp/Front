@@ -1,6 +1,6 @@
 import TeamSlider from '../TeamSlider/TeamSlider';
 
-import { useState } from 'react';
+import { useState, useMemo } from 'react';
 
 import { teamArray } from '../TeamSlider/teamArray.data';
 
@@ -8,7 +8,7 @@ import s from './OurTeam.module.scss';
 
 function OurTeam() {
   const [currentSlide, setCurrentSlide] = useState(0);
-  const slide = teamArray[currentSlide];
+  const slide = useMemo(() => teamArray[currentSlide], [currentSlide]);
 
   return (
     <div id='team' className={s['container']}>
