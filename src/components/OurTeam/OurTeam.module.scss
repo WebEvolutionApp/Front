@@ -17,7 +17,6 @@
     }
 
     .flex {
-      position: relative;
       display: flex;
       flex-direction: column;
       gap: 5.2vw;
@@ -25,7 +24,7 @@
 
     .image-profile {
       position: absolute;
-      bottom: 8%;
+      bottom: 2%;
       left: 30%;
     }
 

@@ -5,6 +5,9 @@ import { teamArray } from './teamArray.data';
 
 import Slider from "react-slick";
 
+import { useEffect } from 'react';
+
+
 function NextArrow({ onClick }) {
   return (
     <div
@@ -25,7 +28,12 @@ function PrevArrow({ onClick }) {
   );
 }
 
-function TeamSlider({ width, onSlideChange }) {
+function TeamSlider({ onSlideChange }) {
+  useEffect(() => {
+    const sliderSlick = document.querySelector(".slick-slider");
+    if (sliderSlick) sliderSlick.style.position = "static";
+  }, []);
+
   const settings = {
     infinite: true,
     slidesToShow: 3,
@@ -47,7 +55,7 @@ function TeamSlider({ width, onSlideChange }) {
       <Slider {...settings}>
         {teamArray.map(slide => (
           <div key={slide.id} className={s['slide']}>
-            <img src={slide.image} alt={slide.name} className={s['slide-image']} style={{ width: width }} />
+            <img src={slide.image} alt={slide.name} className={s['slide-image']} style={{ width: '9.5vw', height: '9vw' }} />
           </div>
         ))}
       </Slider >
