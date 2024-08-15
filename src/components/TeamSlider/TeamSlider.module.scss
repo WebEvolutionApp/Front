@@ -1,0 +1,56 @@
+.slider-container {
+  width: 12vw;
+  overflow: hidden;
+  position: relative;
+  height: 50vw;
+  padding-top: 6vw;
+}
+
+.slide {
+  border-radius: 2vw;
+  height: 12vw;
+  backdrop-filter: blur(48px);
+  box-shadow: inset 0 0 68px 0 rgba(143, 1, 254, 0.5), inset 0 0 4px 0 #8f01fe;
+  background: rgba(255, 255, 255, 0.06);
+  overflow: hidden;
+  margin-bottom: 2.2vw;
+}
+
+.slide-image {
+  width: 10vw;
+  position: absolute;
+  bottom: 0;
+  left: 1.2vw;
+}
+
+.arrowDown {
+  width: 3.5vw;
+  position: absolute;
+  bottom: -23.5vw !important;
+  left: 14.5vw !important;
+  z-index: 3000 !important;
+  cursor: pointer;
+} 
+
+.arrowUp {
+  width: 3.5vw;
+  position: absolute;
+  bottom: -33vw !important;
+  left: 1.8vw !important;
+  z-index: 3000;
+  cursor: pointer;
+} 
+
+.prev-arrow {
+  position: absolute;
+  bottom: -31.5vw !important;
+  left: -10vw !important;
+  cursor: pointer;
+}
+
+.next-arrow {
+  position: absolute;
+  top: -36vw !important;
+  left: 3vw !important;
+  cursor: pointer;
+}

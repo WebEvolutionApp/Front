@@ -1,0 +1,39 @@
+.container {
+  width: 100%;
+  margin: 0 auto;
+}
+
+  .content {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 76%;
+    justify-content: space-between;
+    margin: 0 auto;
+  }
+
+
+    .info-team {
+      width: 47vw;
+      display: flex;
+      flex-wrap: nowrap;
+      justify-content: space-between;
+    }
+
+      .info-team__name {
+        @include mulish(1.97vw, 700, 0.09em);
+      }
+
+      .info-team__text {
+        width: 20vw;
+        @include fontTitleMain();
+      }
+    
+      .info-block {
+        padding-top: 5vw;
+      }
+
+      .img-block {
+        padding-top: 15vw;
+      }
+  
+
