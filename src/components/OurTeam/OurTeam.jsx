@@ -21,7 +21,7 @@ function OurTeam() {
 
         <div key={slide.id} className={s['info-team']}>
           <div className={s['img-block']}>
-          <img src={slide.image} alt={slide.name} className={s['image-profile']} style={{ width: '25vw'}} />
+          <img src={slide.image} alt={slide.name} className={s['image-profile']} style={{ height: '30vw'}} />
           </div>
           <div className={s['info-block']}>
           <h2 className={s['info-team__name']}>{slide.name}</h2>

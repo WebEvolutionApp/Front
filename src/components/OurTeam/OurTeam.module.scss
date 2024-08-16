@@ -20,12 +20,12 @@
     }
 
       .info-team__name {
-        @include mulish(1.97vw, 700, 0.09em);
+        @include fontTitleForm();
       }
 
       .info-team__text {
         width: 24vw;
-        @include fontTitleMain();
+        @include fontTitleHeader();
       }
     
       .info-block {
@@ -34,6 +34,10 @@
 
       .img-block {
         padding-top: 15vw;
+        position: relative;
       }
-  
 
+      .image-profile {
+        position: absolute;
+        bottom: 0;
+      }
