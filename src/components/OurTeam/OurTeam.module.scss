@@ -13,7 +13,7 @@
 
 
     .info-team {
-      width: 47vw;
+      width: 52vw;
       display: flex;
       flex-wrap: nowrap;
       justify-content: space-between;
@@ -24,7 +24,7 @@
       }
 
       .info-team__text {
-        width: 20vw;
+        width: 24vw;
         @include fontTitleMain();
       }
     

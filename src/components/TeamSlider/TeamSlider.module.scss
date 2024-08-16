@@ -1,8 +1,7 @@
 .slider-container {
   width: 12vw;
-  overflow: hidden;
   position: relative;
-  height: 46vw;
+  height: 40vw;
   padding-top: 6vw;
 }
 
@@ -19,10 +18,10 @@
 }
 
 .slide-image {
-  width: 10vw;
+  width: 8vw;
   position: absolute;
   bottom: 0;
-  left: 1.2vw;
+  left: 1.8vw;
 }
 
 .arrowDown {
@@ -55,4 +54,8 @@
   top: -36vw !important;
   left: 3vw !important;
   cursor: pointer;
+}
+
+.prev-arrow::before, .next-arrow::before {
+  font-size: 0 !important;
 }
