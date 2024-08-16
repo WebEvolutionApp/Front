@@ -1,6 +1,7 @@
 import s from './TeamSlider.module.scss';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+
 import arrowUp from '../../../public/icons/next-arrow.svg';
 import arrowDown from '../../../public/icons/prev-arrow.svg';
 
