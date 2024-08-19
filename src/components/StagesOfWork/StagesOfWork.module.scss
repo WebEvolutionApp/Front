@@ -1,18 +1,100 @@
 .container {
+  position: relative;
   width: 100%;
   background-color: $mainBlack;
+  padding-bottom: 40vw;
+}
 
-  .content {
-    position: relative;
-    width: 76%;
-    margin: 0 auto;
+.content {
+  position: relative;
+  width: 76%;
+  margin: 0 auto;
+}
 
-    .heading {
-      width: 37%;
-      @include fontTitleDec2();
-      box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
-      text-shadow: 0 0 40px 0 #f0d, 0 0 80px 0 #f0d, 0 0 280px 0 #f0d,
-        0 0 561px 0 #f0d, 0 0 961px 0 #f0d, 0 0 1682px 0 #f0d;
-    }
-  }
+.stage-work__text {
+  display: inline;
+  @include fontProcessStepText();
+  cursor: default;
+}
+
+.stage-work-one,
+.stage-work-five,
+.stage-work-six {
+  display: flex;
+  align-items: center;
+  gap: 1.35vw;
+}
+
+.stage-work-two,
+.stage-work-three,
+.stage-work-four {
+  display: flex;
+  flex-direction: column;
+}
+
+.stage-step--three {
+  margin-left: 3.6vw;
+}
+
+.stage-work-one {
+  position: absolute;
+  top: 135%;
+  left: 28%;
+  width: 100%;
+}
+
+.stage-work-two {
+  position: absolute;
+  top: 104%;
+  left: 66%;
+  width: 100%;
+}
+
+.stage-work-three {
+  position: absolute;
+  top: 93%;
+  left: 87%;
+  width: 100%;
+}
+
+.stage-work-four {
+  position: absolute;
+  top: 239%;
+  left: 74%;
+  width: 100%;
+}
+
+.stage-work-five {
+  position: absolute;
+  top: 254%;
+  left: 45%;
+  width: 100%;
+}
+
+.stage-work-six {
+  position: absolute;
+  top: 237%;
+  left: 12%;
+  width: 100%;
+}
+
+.stage-animation {
+  position: absolute;
+  width: 100%;
+  border: none;
+  outline: none;
+  object-fit: cover;
+  display: block;
+  top: 20%;
+}
+
+.stage-title {
+  width: 50%;
+  height: auto;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  display: block;
+  object-fit: cover;
+  transform: translateX(-6vw);
 }
