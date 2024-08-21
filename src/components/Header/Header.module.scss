@@ -22,9 +22,14 @@
       }
     }
 
+
 .headerNavbar__Menu {
+  list-style: none;
   display: flex;
-  gap: 3.6979vw;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  width: 60%;
+  padding-right: 0;
 }
 
 
