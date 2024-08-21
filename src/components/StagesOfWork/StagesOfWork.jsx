@@ -7,7 +7,7 @@ import title from '../../../public/images/stages-of-work.mp4';
 
 import s from './StagesOfWork.module.scss';
 
-import { useRef, useEffect } from 'react';
+import { useRef, useEffect, useState } from 'react';
 
 function StagesOfWork() {
   const videoStageAnimation = useRef(null);
@@ -77,7 +77,7 @@ function StagesOfWork() {
           Ваш браузер не поддерживает тег <code>video</code>.
         </video>
 
-        {arrayProcessStep.map(stage => (
+        {arrayProcessStep.map((stage, index) => (
           <div key={stage.id} className={s[`stage-work-${stage.class}`]}>
             <ProcessStep number={stage.number} className={s[`stage-step--${stage.class}`]} />
             <p className={s['stage-work__text']}>{stage.text}</p>
