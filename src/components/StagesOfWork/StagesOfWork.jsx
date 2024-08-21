@@ -82,7 +82,7 @@ function StagesOfWork() {
             <ProcessStep number={stage.number} className={s[`stage-step--${stage.class}`]} />
             <p className={s['stage-work__text']}>{stage.text}</p>
           </div>
-        ))}
+        ))};
       </div>
     </div>
   );
