@@ -45,8 +45,8 @@
 
 .stage-work-two {
   position: absolute;
-  top: 104%;
-  left: 66%;
+  top: 120%;
+  left: 62%;
   width: 100%;
 }
 
@@ -97,4 +97,66 @@
   display: block;
   object-fit: cover;
   transform: translateX(-6vw);
+}
+
+@media only screen and (max-width: 576px) {
+  .content {
+    width: 90%;
+  }
+
+  .stage-work__text {
+    width: 7%;
+    @include fontProcessStepTextMedia();
+  }
+
+  .stage-work-one,
+  .stage-work-two,
+  .stage-work-three {
+    flex-direction: column-reverse;
+  }
+
+  .stage-work-four,
+  .stage-work-five,
+  .stage-work-six {
+    flex-direction: column;
+  }
+
+  .stage-work-one {
+    top: 67%;
+    left: -12%;
+    width: 90%;
+  }
+
+  .stage-work-two {
+    top: 62%;
+    left: 60%;
+    width: 90%;
+  }
+
+  .stage-work-three {
+    top: 41%;
+    left: 85%;
+    width: 90%;
+    .stage-step--three {
+      margin: 0;
+    }
+  }
+
+  .stage-work-four {
+    top: 205%;
+    left: 70%;
+    width: 90%;
+  }
+
+  .stage-work-five {
+    top: 219%;
+    left: 3%;
+    width: 90%;
+  }
+
+  .stage-work-six {
+    top: 208%;
+    left: -24%;
+    width: 90%;
+  }
 }

@@ -103,3 +103,8 @@
   @include mulish(1.25vw, 400, 120%);
   color: $mainWhite;
 }
+
+@mixin fontProcessStepTextMedia() {
+  @include mulish(2.25vw, 400, 120%);
+  color: $mainWhite;
+}

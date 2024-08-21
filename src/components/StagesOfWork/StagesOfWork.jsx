@@ -7,15 +7,60 @@ import title from '../../../public/images/stages-of-work.mp4';
 
 import s from './StagesOfWork.module.scss';
 
+import { useRef, useEffect } from 'react';
+
 function StagesOfWork() {
+  const videoStageAnimation = useRef(null);
+  const videoStageTitle = useRef(null);
+
+  useEffect(() => {
+    const handleIntersection = (entries) => {
+      entries.forEach(entry => {
+        const video = entry.target;
+        (entry.isIntersecting) ? video.play() : video.pause();
+      });
+    };
+
+    const observer = new IntersectionObserver(handleIntersection, {
+      threshold: 0.25,
+    });
+
+    if (videoStageAnimation.current) {
+      observer.observe(videoStageAnimation.current);
+      videoStageAnimation.current.addEventListener('ended', () => {
+        videoStageAnimation.current.pause();
+        videoStageAnimation.current.currentTime = videoStageAnimation.current.duration;
+      });
+    }
+
+    if (videoStageTitle.current) {
+      observer.observe(videoStageTitle.current);
+      videoStageTitle.current.addEventListener('ended', () => {
+        videoStageTitle.current.pause();
+        videoStageTitle.current.currentTime = videoStageTitle.current.duration;
+      });
+    }
+
+    return () => {
+      if (videoStageAnimation.current) {
+        observer.unobserve(videoStageAnimation.current);
+        videoStageAnimation.current.removeEventListener('ended', () => { });
+      }
+
+      if (videoStageTitle.current) {
+        observer.unobserve(videoStageTitle.current);
+        videoStageTitle.current.removeEventListener('ended', () => { });
+      }
+    };
+  }, []);
+
   return (
     <div className={s['container']}>
       <video
+        ref={videoStageAnimation}
         className={s['stage-animation']}
-        autoPlay
         muted
         playsInline
-        loop
       >
         <source src={animation} type='video/mp4' />
         Ваш браузер не поддерживает тег <code>video</code>.
@@ -23,11 +68,10 @@ function StagesOfWork() {
 
       <div className={s['content']}>
         <video
+          ref={videoStageTitle}
           className={s['stage-title']}
-          autoPlay
           muted
           playsInline
-          loop
         >
           <source src={title} type='video/mp4' />
           Ваш браузер не поддерживает тег <code>video</code>.
