@@ -1,12 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@200..1000&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@200..1000&display=swap");
 
 @font-face {
-  font-family: 'VlaShu';
-  src: url('../../../public/fonts/VlaShu/VlaShu.ttf') format('truetype');
+  font-family: "VlaShu";
+  src: url("../../../public/fonts/VlaShu/VlaShu.ttf") format("truetype");
   font-weight: 700;
   font-style: normal;
 }
-
 
 @mixin VlaShu($font-size, $font-weight, $line-height) {
   font-family: "VlaShu", sans-serif;
@@ -15,7 +14,7 @@
   line-height: $line-height;
 }
 
-@mixin mulish($font-size, $font-weight, $line-height){
+@mixin mulish($font-size, $font-weight, $line-height) {
   font-family: "Mulish", sans-serif;
   font-size: $font-size;
   font-weight: $font-weight;
@@ -26,7 +25,7 @@
   @include VlaShu(4.4vw, 700, 120%);
   text-transform: uppercase;
   color: $mainWhite;
-} 
+}
 
 @mixin fontTitleDec2() {
   @include VlaShu(3vw, 500, 120%);
@@ -59,16 +58,11 @@
   color: $formGrey;
 }
 
-
-
-
-
-
 @mixin fontTitleDecMedia() {
   @include VlaShu(8vw, 700, 120%);
   text-transform: uppercase;
   color: $mainWhite;
-} 
+}
 
 @mixin fontTitleMainBtnMedia() {
   @include mulish(5vw, 400, 120%);
@@ -102,5 +96,15 @@
 
 @mixin fontTitleHeaderMedia() {
   @include mulish(2.3vw, 400, 120%);
+  color: $mainWhite;
+}
+
+@mixin fontProcessStepText() {
+  @include mulish(1.25vw, 400, 120%);
+  color: $mainWhite;
+}
+
+@mixin fontProcessStepTextMedia() {
+  @include mulish(2.25vw, 400, 120%);
   color: $mainWhite;
 }

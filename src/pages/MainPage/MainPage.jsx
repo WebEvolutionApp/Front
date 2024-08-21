@@ -8,6 +8,7 @@ import Header from '../../components/Header/Header';
 import HeroSection from '../../components/HeroSection/HeroSection';
 import Form from "../../components/Form/Form";
 import Footer from "../../components/Footer/Footer";
+import StagesOfWork from '../../components/StagesOfWork/StagesOfWork';
 import OurTeam from "../../components/OurTeam/OurTeam";
 
 export const MainPage = () => {
@@ -16,6 +17,7 @@ export const MainPage = () => {
       <Header />
       <HeroSection />
       <ReasonsToWorkWithUs />
+      <StagesOfWork />
       <OurServices />
       <OurTeam />
       <Form />
