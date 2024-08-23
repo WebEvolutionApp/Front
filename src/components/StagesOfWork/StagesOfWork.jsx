@@ -24,7 +24,7 @@ function StagesOfWork() {
     });
   };
 
-  const videoStageAnimation = useIntersectionObserver(handleIntersection, { threshold: 0.5 });
+  const videoStageAnimation = useIntersectionObserver(handleIntersection, { threshold: 0.2 });
   const videoStageTitle = useIntersectionObserver(handleIntersection, { threshold: 0.5 });
 
   const animationStages = useAnimationStages(arrayProcessStep, 250);
