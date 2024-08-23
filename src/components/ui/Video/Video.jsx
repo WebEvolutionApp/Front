@@ -9,7 +9,7 @@ const Video = forwardRef(function Video({ className, src }, ref) {
       playsInline
       preload="auto"
     >
-      <source src={src} type='video/mp4' />
+      <source src={src} type='video/webm' />
       Ваш браузер не поддерживает тег <code>video</code>.
     </video>
   );
