@@ -7,6 +7,7 @@ const Video = forwardRef(function Video({ className, src }, ref) {
       className={className}
       muted
       playsInline
+      preload="auto"
     >
       <source src={src} type='video/mp4' />
       Ваш браузер не поддерживает тег <code>video</code>.
