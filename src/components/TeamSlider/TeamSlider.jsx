@@ -48,13 +48,13 @@ function TeamSlider({ onSlideChange }) {
     nextArrow: <NextArrow />,
     prevArrow: <PrevArrow />,
     beforeChange: function(currentSlide, nextSlide) {
-      console.log("before change", currentSlide, nextSlide);
+      // console.log("before change", currentSlide, nextSlide);
       if (onSlideChange) {
         onSlideChange(nextSlide);
       }
     },
     afterChange: function(currentSlide) {
-      console.log("after change", currentSlide);
+      // console.log("after change", currentSlide);
     }
   };
 

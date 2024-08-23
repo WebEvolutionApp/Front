@@ -7,9 +7,13 @@ import title from '../../../public/images/stages-of-work.mp4';
 
 import s from './StagesOfWork.module.scss';
 
+import cn from 'classnames';
+
 import { useRef, useEffect, useState } from 'react';
 
+
 function StagesOfWork() {
+  const [visibleStages, setVisibleStages] = useState([]);
   const videoStageAnimation = useRef(null);
   const videoStageTitle = useRef(null);
 
@@ -22,7 +26,7 @@ function StagesOfWork() {
     };
 
     const observer = new IntersectionObserver(handleIntersection, {
-      threshold: 0.25,
+      threshold: 0.5,
     });
 
     if (videoStageAnimation.current) {
@@ -54,6 +58,14 @@ function StagesOfWork() {
     };
   }, []);
 
+  useEffect(() => {
+    arrayProcessStep.forEach((stage, index) => {
+      setTimeout(() => {
+        setVisibleStages(prev => [...prev, stage.id]);
+      }, index * 250);
+    });
+  }, []);
+
   return (
     <div className={s['container']}>
       <video
@@ -77,14 +89,19 @@ function StagesOfWork() {
           Ваш браузер не поддерживает тег <code>video</code>.
         </video>
 
-        {arrayProcessStep.map((stage, index) => (
-          <div key={stage.id} className={s[`stage-work-${stage.class}`]}>
+        {arrayProcessStep.map(stage => (
+          <div
+            key={stage.id}
+            className={cn(s[`stage-work-${stage.class}`], {
+              [s['stage-work--visible']]: visibleStages.includes(stage.id)
+            })}
+          >
             <ProcessStep number={stage.number} className={s[`stage-step--${stage.class}`]} />
             <p className={s['stage-work__text']}>{stage.text}</p>
           </div>
-        ))};
+        ))}
       </div>
-    </div>
+    </div >
   );
 }
 
