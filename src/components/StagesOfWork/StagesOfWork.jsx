@@ -30,7 +30,7 @@ function StagesOfWork() {
   const animationStages = useAnimationStages(arrayProcessStep, 250);
 
   return (
-    <div className={s['container']}>
+    <div id='stages' className={s['container']}>
       <Video
         ref={videoStageAnimation}
         className={s['stage-animation']}
