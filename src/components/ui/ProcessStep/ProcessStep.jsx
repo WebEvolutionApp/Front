@@ -1,4 +1,4 @@
-import s from './ProcessStep.module.scss';
+import s from './styles.module.scss';
 
 function ProcessStep({ number, className }) {
   return (

@@ -8,29 +8,29 @@ import lampUpperPart from '../../assets/images/lamp-upper-part.png';
 import lamp from '../../assets/images/lamp.png';
 
 function ReasonsToWorkWithUs() {
-    const [isSwinging, setIsSwinging] = useState(false);
-    const [isLightOn, setIsLightOn] = useState(false);
-    const swingTimerRef = useRef(null);
-  
-    const handleClick = () => {
-      if (isSwinging) {
-        return;
-      }
-  
-      setIsSwinging(true);
-  
-      if (isLightOn) {
-        setIsLightOn(false);
-        swingTimerRef.current = setTimeout(() => {
-          setIsSwinging(false);
-        }, 3000);
-      } else {
-        swingTimerRef.current = setTimeout(() => {
-          setIsSwinging(false);
-          setIsLightOn(true);
-        }, 3000);
-      }
-    };
+  const [isSwinging, setIsSwinging] = useState(false);
+  const [isLightOn, setIsLightOn] = useState(false);
+  const swingTimerRef = useRef(null);
+
+  const handleClick = () => {
+    if (isSwinging) {
+      return;
+    }
+
+    setIsSwinging(true);
+
+    if (isLightOn) {
+      setIsLightOn(false);
+      swingTimerRef.current = setTimeout(() => {
+        setIsSwinging(false);
+      }, 3000);
+    } else {
+      swingTimerRef.current = setTimeout(() => {
+        setIsSwinging(false);
+        setIsLightOn(true);
+      }, 3000);
+    }
+  };
 
   return (
     <div className={s.reasonsToWorkWithUs__container}>

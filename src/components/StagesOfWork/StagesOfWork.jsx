@@ -6,10 +6,10 @@ import { arrayProcessStep } from './processStep.data';
 import useIntersectionObserver from '../../hooks/useIntersectionObserver';
 import useAnimationStages from '../../hooks/useAnimationStages';
 
-import animation from '../../../public/images/steps-of-work-lines.webm'
-import title from '../../../public/images/stages-of-work.mp4';
+import animation from '../../assets/images/steps-of-work-lines.webm'
+import title from '../../assets/images/stages-of-work.mp4';
 
-import s from './StagesOfWork.module.scss';
+import s from './styles.module.scss';
 
 import cn from 'classnames';
 

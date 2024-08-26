@@ -1,5 +1,5 @@
 import React from 'react';
-import s from './HeroSection.module.scss';
+import s from './styles.module.scss';
 import Button from '../ui/Button/Button';
 import animation from '../../assets/images/3d_done.mp4'
 

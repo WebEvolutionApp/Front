@@ -1,9 +1,9 @@
-import s from './TeamSlider.module.scss';
+import s from './styles.module.scss';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
-import arrowUp from '../../../public/icons/next-arrow.svg';
-import arrowDown from '../../../public/icons/prev-arrow.svg';
+import arrowUp from '../../assets/icons/next-arrow.svg';
+import arrowDown from '../../assets/icons/prev-arrow.svg';
 
 import { teamArray } from './teamArray.data';
 
