@@ -6,6 +6,8 @@ import ellipseThree from "../../assets/images/Ellipse3.3.png";
 import ellipseFour from "../../assets/images/Ellipse2.png";
 import TextWindow from "../ui/TextWindow/TextWindow";
 import infinite from "../../assets/images/Infinite.png";
+import lineFour from '../../assets/images/LineFour.png';
+
 
 
 export function OurServices() {
@@ -37,6 +39,8 @@ export function OurServices() {
 
   return (
     <div id="services" className={s.ourServices__container}>
+      <img className={s.ourServices__container__BgLineOne} src={lineFour} alt="" />
+      <img className={s.ourServices__container__BgLineTwo} src={lineFour} alt="" />
       <img
         className={s.ourServices__container__BgOne}
         src={ellipseThree}

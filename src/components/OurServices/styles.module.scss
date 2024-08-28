@@ -31,6 +31,18 @@
         position: absolute;
         display: none;
     }
+
+    &__BgLineOne {
+        position: absolute;
+        top: -1vw;
+        left: 39vw;
+        height: 60vw;
+        z-index: 1;
+}
+
+    &__BgLineTwo {
+        position: absolute;
+    }
 }
 
 &__content {
@@ -88,6 +100,7 @@
     padding-left: 6vw;
     transition: height 0.3s ease; 
     width: 100%;
+    z-index: 100;
 
     &:hover {
         height: 11vw;
