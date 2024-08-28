@@ -1,9 +1,10 @@
 .container {
-  position: relative;
   width: 100%;
   background-color: $mainBlack;
-  padding-bottom: 49vw;
+  height: 60vw;
   overflow: hidden;
+  position: relative;
+  padding-bottom: 6vw;
 }
 
 .content {
@@ -39,42 +40,42 @@
 
 .stage-work-one {
   position: absolute;
-  top: 28vw;
+  top: 20vw;
   left: 22vw;
   width: 100%;
 }
 
 .stage-work-two {
   position: absolute;
-  top: 24vw;
+  top: 16vw;
   left: 47vw;
   width: 100%;
 }
 
 .stage-work-three {
   position: absolute;
-  top: 19vw;
+  top: 11vw;
   left: 66vw;
   width: 100%;
 }
 
 .stage-work-four {
   position: absolute;
-  top: 47vw;
+  top: 39vw;
   left: 56vw;
   width: 100%;
 }
 
 .stage-work-five {
   position: absolute;
-  top: 48vw;
+  top: 40vw;
   left: 35vw;
   width: 100%;
 }
 
 .stage-work-six {
   position: absolute;
-  top: 47vw;
+  top: 39vw;
   left: 9vw;
   width: 100%;
 }
@@ -86,10 +87,12 @@
   outline: none;
   object-fit: cover;
   display: block;
-  top: 12vw;
+  top: 5vw;
 }
 
 .stage-title {
+  position: absolute;
+  top: 3vw;
   margin-top: 3vw;
   @include fontTitleDec2();
 
@@ -144,48 +147,43 @@
     flex-direction: column-reverse;
   }
 
-  .stage-work-four,
-  .stage-work-five,
-  .stage-work-six {
-    flex-direction: column;
-  }
 
-  .stage-work-one {
-    top: 17vw;
-    left: -8vw;
-    width: 90%;
-  }
+}
 
-  .stage-work-two {
-    top: 13vw;
-    left: 55vw;
-    width: 90%;
-  }
+.bg-line-one {
+  position: absolute;
+  height: 55vw;
+  right: -9vw;
+}
 
-  .stage-work-three {
-    top: 10vw;
-    left: 77vw;
-    width: 90%;
-    .stage-step--three {
-      margin: 0;
-    }
-  }
+.bg-line-two {
+  position: absolute;
+  width: 70vw;
+  right: -16vw;
+  top: 55vw;
+  z-index: 100;
+}
 
-  .stage-work-four {
-    top: 47vw;
-    left: 63vw;
-    width: 90%;
-  }
+.bg-line-three {
+  position: absolute;
+  width: 70vw;
+  left: -43vw;
+  top: 59vw;
+  z-index: 100;
+}
 
-  .stage-work-five {
-    top: 51vw;
-    left: 3vw;
-    width: 90%;
-  }
+.bg-line-four {
+  position: absolute;
+  height: 40vw;
+  left: 27vw;
+  top: 53vw;
+  z-index: 100;
+}
 
-  .stage-work-six {
-    top: 47vw;
-    left: -22vw;
-    width: 90%;
-  }
+.bg-line-five {
+  position: absolute;
+  height: 35vw;
+  right: 10vw;
+  top: 50vw;
+  z-index: 100;
 }

@@ -6,6 +6,10 @@ import ellipseTwo from '../../assets/images/Ellipse2.png';
 import ellipseThree from '../../assets/images/Ellipse3.png';
 import lampUpperPart from '../../assets/images/lamp-upper-part.png';
 import lamp from '../../assets/images/lamp.png';
+import lineOne from '../../assets/images/LineOne.png';
+import lineTwo from '../../assets/images/LineTwo.png';
+import lineThree from '../../assets/images/LineThree.png';
+import lineFive from '../../assets/images/LineFive.png';
 
 function ReasonsToWorkWithUs() {
   const [isSwinging, setIsSwinging] = useState(false);
@@ -34,6 +38,10 @@ function ReasonsToWorkWithUs() {
 
   return (
     <div className={s.reasonsToWorkWithUs__container}>
+      <img className={s.reasonsToWorkWithUs__container__BgLineOne} src={lineOne} alt="" />
+      <img className={s.reasonsToWorkWithUs__container__BgLineTwo} src={lineTwo} alt="" />
+      <img className={s.reasonsToWorkWithUs__container__BgLineThree} src={lineThree} alt="" />
+      <img className={s.reasonsToWorkWithUs__container__BgLineFive} src={lineFive} alt="" />
       <img className={s.reasonsToWorkWithUs__container__BgOne} src={ellipseOne} alt="" />
       <img className={s.reasonsToWorkWithUs__container__BgTwo} src={ellipseTwo} alt="" />
       <img className={s.reasonsToWorkWithUs__container__BgThree} src={ellipseThree} alt="" />

@@ -6,24 +6,56 @@
     background-color: $mainBlack;
     overflow: hidden;
 
+    &__BgLineOne {
+        position: absolute;
+        height: 34vw;
+        right: 40vw;
+        z-index: 1;
+    }
+
+    &__BgLineTwo {
+      position: absolute;
+      width: 97vw;
+      top: 34vw;
+      z-index: 1;
+  }
+
+  &__BgLineThree {
+    position: absolute;
+    height: 55vw;
+    right: 3vw;
+    top: 24vw;
+    z-index: 1;
+}
+
+&__BgLineFive {
+  position: absolute;
+  width: 13vw;
+  left: 37vw;
+  top: 22vw;
+  z-index: 1;
+}
+
     &__BgOne {
         width: 45vw;
         position: absolute;
         bottom: 0;
         left: 0;
+        z-index: 10;
     }
     &__BgTwo {
         position: absolute;
         width: 35vw;
         left: 26vw;
         bottom: -6vw;
-        
+        z-index: 10;
     }
     &__BgThree {
         position: absolute;
         right: 3vw;
         width: 60vw;
         bottom: -2vw;
+        z-index: 10;
     }
   }
 
@@ -73,6 +105,7 @@
   }
 
   .textWindow {
+    z-index: 100;
     box-sizing: border-box;
     position: relative;
     margin-right: 6vw;

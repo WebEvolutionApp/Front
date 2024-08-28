@@ -12,6 +12,9 @@ import title from '../../assets/images/stages-of-work.mp4';
 import s from './styles.module.scss';
 
 import cn from 'classnames';
+import lineFour from '../../assets/images/LineFour.png';
+import lineSix from '../../assets/images/LineSix.png';
+import lineOne from '../../assets/images/LineOne.png';
 
 
 function StagesOfWork() {
@@ -31,13 +34,18 @@ function StagesOfWork() {
 
   return (
     <div id='stages' className={s['container']}>
+        
       <Video
         ref={videoStageAnimation}
         className={s['stage-animation']}
         src={animation} />
 
       <div className={s['content']}>
-
+      <img className={s['bg-line-one']} src={lineFour} alt="" />
+      <img className={s['bg-line-two']} src={lineSix} alt="" />
+      <img className={s['bg-line-three']} src={lineSix} alt="" />
+      <img className={s['bg-line-four']} src={lineOne} alt="" />
+      <img className={s['bg-line-five']} src={lineOne} alt="" />
           <div className={s['stage-title']}>
             Этапы работы <br /> с нами
           </div>

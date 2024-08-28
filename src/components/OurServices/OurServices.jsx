@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import s from "./styles.module.scss";
-import ellipseOne from "../../assets/images/Ellipse1.1.png";
+import ellipseOne from "../../assets/images/Ellipse3.3.png";
 import ellipseTwo from "../../assets/images/Ellipse2.2.png";
 import ellipseThree from "../../assets/images/Ellipse3.3.png";
 import ellipseFour from "../../assets/images/Ellipse2.png";
