@@ -3,6 +3,10 @@
     text-decoration: none;
     color: $mainWhite;
     @include fontTitleHeader();
+    padding-left: 0;
+    margin-block-start: 0;
+margin-block-end: 0;
+padding-inline-start: 0;
   
 
     &::after {

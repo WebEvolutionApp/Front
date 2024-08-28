@@ -37,10 +37,10 @@ function StagesOfWork() {
         src={animation} />
 
       <div className={s['content']}>
-        <Video
-          ref={videoStageTitle}
-          className={s['stage-title']}
-          src={title} />
+
+          <div className={s['stage-title']}>
+            Этапы работы <br /> с нами
+          </div>
 
         {arrayProcessStep.map(stage => (
           <div

@@ -13,7 +13,7 @@ export function Form() {
       <img className={s.form__container__BgThree} src={ellipseOne} alt="" />
       <img className={s.form__container__BgFour} src={ellipseTwo} alt="" />
       <div className={s.form__content}>
-        <div className={s.form__title}>Обратная связь</div>
+        <div className={s.form__title}>Обратная <br /> связь</div>
         <div className={s.form__formWindow}>
           <div className={s.form__formTitle}>
             Оставить заявку на консультацию по созданию сайта

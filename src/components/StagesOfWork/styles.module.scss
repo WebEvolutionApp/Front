@@ -2,8 +2,8 @@
   position: relative;
   width: 100%;
   background-color: $mainBlack;
-  padding-bottom: 42vw;
-  overflow: hidden;
+  padding-bottom: 46vw;
+  overflow-x: hidden;
 }
 
 .content {
@@ -90,14 +90,17 @@
 }
 
 .stage-title {
-  width: 50%;
-  height: auto;
-  border: none;
-  outline: none;
-  background-color: transparent;
-  display: block;
-  object-fit: cover;
-  transform: translateX(-6vw);
+  margin-top: 3vw;
+  @include fontTitleDec2();
+
+  text-shadow: 
+  /* Белая обводка */
+  -1px -1px 0 rgb(255, 176, 250),
+  /* Розовая тень */
+  0 0 30px rgba(221, 0, 255, .75), 
+  0 0 50px rgb(221, 0, 255), 
+  0 0 20px rgb(221, 0, 255), 
+  0 0 50px rgb(221, 0, 255);
 }
 
 @keyframes fadeIn {

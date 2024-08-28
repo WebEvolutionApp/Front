@@ -351,3 +351,9 @@ template {
 [hidden] {
   display: none;
 }
+
+ul, ol, menu {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}

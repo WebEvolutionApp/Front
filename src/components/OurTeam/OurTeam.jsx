@@ -12,7 +12,10 @@ function OurTeam() {
 
   return (
     <div id='team' className={s['container']}>
+     
       <div className={s['content']}>
+      <div className={s['title']}>Наша <br />команда</div>
+      <div className={s['team-info']}>
         <TeamSlider
           onSlideChange={setCurrentSlide}
         />
@@ -25,6 +28,7 @@ function OurTeam() {
             <p className={s['info-team__text']}>{slide.info}</p>
           </div>
         </div>
+      </div>
       </div>
     </div>
   );
