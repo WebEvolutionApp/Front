@@ -5,6 +5,7 @@ import { useState, useMemo } from 'react';
 import { teamArray } from '../../components/TeamSlider/teamArray.data';
 
 import s from './styles.module.scss';
+import lineOne from '../../assets/images/LineOne.png';
 
 function OurTeam() {
   const [currentSlide, setCurrentSlide] = useState(0);

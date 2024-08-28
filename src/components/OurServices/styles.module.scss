@@ -36,12 +36,48 @@
         position: absolute;
         top: -1vw;
         left: 39vw;
-        height: 60vw;
+        height: 41vw;
         z-index: 1;
 }
 
     &__BgLineTwo {
         position: absolute;
+        top: -2vw;
+        right: 22vw;
+        height: 41vw;
+        z-index: 1;
+    }
+
+    &__BgLineThree {
+        position: absolute;
+        top: 40vw;
+        left: 39vw;
+        width: 85vw;
+        z-index: 1;
+    }
+
+    &__BgLineFour {
+        position: absolute;
+        top: 20vw;
+        left: 57vw;
+        height: 35vw;
+        z-index: 1;
+    }
+
+    &__BgLineFive {
+        position: absolute;
+        top: 20vw;
+        left: -5vw;
+        width: 80vw;
+        z-index: 1;
+    }
+
+    &__BgLineSix {
+        position: absolute;
+        top: 20vw;
+        left: 15vw;
+        height: 50vw;
+        z-index: 1;
     }
 }
 
@@ -52,8 +88,8 @@
 }
 
 &__title {
-        margin-bottom: 6vw;
-        margin-top: 3vw;
+        margin-bottom: 4vw;
+        margin-top: 2vw;
         @include fontTitleDec2();
         text-shadow: 
          /* Белая обводка */

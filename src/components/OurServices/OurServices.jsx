@@ -6,8 +6,8 @@ import ellipseThree from "../../assets/images/Ellipse3.3.png";
 import ellipseFour from "../../assets/images/Ellipse2.png";
 import TextWindow from "../ui/TextWindow/TextWindow";
 import infinite from "../../assets/images/Infinite.png";
-import lineFour from '../../assets/images/LineFour.png';
-
+import lineFour from '../../assets/images/LineOne.png';
+import lineSix from '../../assets/images/LineSix.png';
 
 
 export function OurServices() {
@@ -41,6 +41,10 @@ export function OurServices() {
     <div id="services" className={s.ourServices__container}>
       <img className={s.ourServices__container__BgLineOne} src={lineFour} alt="" />
       <img className={s.ourServices__container__BgLineTwo} src={lineFour} alt="" />
+      <img className={s.ourServices__container__BgLineThree} src={lineSix} alt="" />
+      <img className={s.ourServices__container__BgLineFour} src={lineFour} alt="" />
+      <img className={s.ourServices__container__BgLineFive} src={lineSix} alt="" />
+      <img className={s.ourServices__container__BgLineSix} src={lineFour} alt="" />
       <img
         className={s.ourServices__container__BgOne}
         src={ellipseThree}
