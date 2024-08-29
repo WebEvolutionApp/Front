@@ -1,0 +1,49 @@
+.container {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.content {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.slider {
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+
+    &Info {
+        width: 70%;
+        display: flex;
+        flex-direction: column
+    }
+}
+
+.verticalText {
+    @include fontTitleDecSlider();
+}
+
+
+
+.infoTeam__text {
+    @include fontTitleMain();
+}
+
+.title {
+    @include fontTitleDec2();
+    margin-bottom: 9vw;
+}
+
+.textWindow{
+
+    margin-top: 4vw;
+
+    &__text {
+        padding: 3vw 7vw 3vw 7vw;
+        @include fontTitleMainMedia();
+    }
+}

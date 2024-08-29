@@ -54,8 +54,8 @@
 
 .stage-work-three {
   position: absolute;
-  top: 11vw;
-  left: 66vw;
+  top: 14vw;
+  left: 68vw;
   width: 100%;
 }
 
@@ -68,15 +68,15 @@
 
 .stage-work-five {
   position: absolute;
-  top: 40vw;
+  top: 42vw;
   left: 35vw;
   width: 100%;
 }
 
 .stage-work-six {
   position: absolute;
-  top: 39vw;
-  left: 9vw;
+  top: 40vw;
+  left: 8vw;
   width: 100%;
 }
 
@@ -95,15 +95,6 @@
   top: 3vw;
   margin-top: 3vw;
   @include fontTitleDec2();
-
-  text-shadow: 
-  /* Белая обводка */
-  -1px -1px 0 rgb(255, 176, 250),
-  /* Розовая тень */
-  0 0 30px rgba(221, 0, 255, .75), 
-  0 0 50px rgb(221, 0, 255), 
-  0 0 20px rgb(221, 0, 255), 
-  0 0 50px rgb(221, 0, 255);
 }
 
 @keyframes fadeIn {
@@ -136,6 +127,15 @@
     width: 90%;
   }
 
+  .container {
+    height: 75vw;
+  }
+
+  .stage-animation {
+    width: 100%;
+    top: 19vw;
+  }
+
   .stage-work__text {
     width: 7%;
     @include fontProcessStepTextMedia();
@@ -146,7 +146,50 @@
   .stage-work-three {
     flex-direction: column-reverse;
   }
+  .stage-work-four,
+  .stage-work-five,
+  .stage-work-six {
+    flex-direction: column;
+  }
 
+  .stage-work-one {
+    top: 23vw;
+    left: -10vw;
+    width: 90%;
+  }
+
+  .stage-work-two {
+    top: 20vw;
+    left: 54vw;
+    width: 90%;
+  }
+
+  .stage-work-three {
+    top: 19vw;
+    left: 79vw;
+    width: 90%;
+    .stage-step--three {
+      margin: 0;
+    }
+  }
+
+  .stage-work-four {
+    top: 53vw;
+    left: 62vw;
+    width: 90%;
+  }
+
+  .stage-work-five {
+    top: 58vw;
+    left: 2vw;
+    width: 90%;
+  }
+
+  .stage-work-six {
+    top: 54vw;
+    left: -23vw;
+    width: 90%;
+  }
 
 }
 

@@ -1,3 +1,20 @@
 html, body {
     background-color: $mainBlack;
 }
+
+.desktopOnly {
+    display: block;
+  
+    @media (max-width: 576px) {
+      display: none;
+    }
+  }
+  
+  .mobileOnly {
+    display: none;
+  
+    @media (max-width: 576px) {
+      display: block;
+    }
+  }
+  

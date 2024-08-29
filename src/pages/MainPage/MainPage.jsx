@@ -1,5 +1,4 @@
 import React from "react";
-
 import s from './styles.module.scss';
 
 import ReasonsToWorkWithUs from "../../components/ReasonsToWorkWithUs/ReasonsToWorkWithUs";
@@ -10,6 +9,7 @@ import Form from "../../components/Form/Form";
 import Footer from "../../components/Footer/Footer";
 import StagesOfWork from '../../components/StagesOfWork/StagesOfWork';
 import OurTeam from "../../components/OurTeam/OurTeam";
+import OurTeamMobile from "../../components/OurTeamMobile/OurTeamMobile";
 
 export const MainPage = () => {
   return (
@@ -19,7 +19,12 @@ export const MainPage = () => {
       <ReasonsToWorkWithUs />
       <StagesOfWork />
       <OurServices />
-      <OurTeam />
+      <div className={s.desktopOnly}>
+        <OurTeam />
+      </div>
+      <div className={s.mobileOnly}>
+        <OurTeamMobile />
+      </div>
       <Form />
       <Footer />
     </>

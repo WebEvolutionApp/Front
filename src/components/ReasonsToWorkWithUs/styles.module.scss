@@ -76,14 +76,7 @@
         margin-bottom: 6vw;
         margin-top: 3vw;
         @include fontTitleDec2();
-        text-shadow: 
-         /* Белая обводка */
-         -1px -1px 0 rgb(255, 176, 250),
-         /* Розовая тень */
-         0 0 30px rgba(221, 0, 255, .75), 
-         0 0 50px rgb(221, 0, 255), 
-         0 0 20px rgb(221, 0, 255), 
-         0 0 50px rgb(221, 0, 255);
+      
     }
 
     &__mainSection__reasons {
@@ -180,6 +173,9 @@
       display: flex;
       flex-direction: column;
     }
+    .reasonsToWorkWithUs__mainSection__title {
+      margin-bottom: 7vw;
+    }
 
     .textWindow:nth-child(3) {
       margin-left: 0vw;
@@ -191,6 +187,7 @@
       padding-top: 8vw;
       padding-left: 9vw;
       padding-right: 3vw;
+      margin-bottom: 2vw;
      }
 
      .reasonsToWorkWithUs__content {

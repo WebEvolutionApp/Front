@@ -31,6 +31,18 @@
   @include VlaShu(3vw, 500, 120%);
   text-transform: uppercase;
   color: $mainPink;
+  text-shadow: 
+  /* Белая обводка */
+  -1px -1px 0 rgb(255, 176, 250),
+  /* Розовая тень */
+  0 0 30px rgba(221, 0, 255, .75), 
+  0 0 50px rgb(221, 0, 255), 
+  0 0 20px rgb(221, 0, 255), 
+  0 0 50px rgb(221, 0, 255);
+
+  @media (max-width: 570px) {
+    font-size: 6vw; 
+  }
 }
 
 @mixin fontTitleDecSlider() {
@@ -45,6 +57,13 @@
   0 0 50px rgb(132, 0, 255), 
   0 0 20px rgb(136, 0, 255), 
   0 0 50px rgb(115, 0, 255);
+  writing-mode: vertical-rl;
+  transform: rotate(360deg); 
+  text-orientation: sideways;
+
+  @media (max-width: 570px) {
+    font-size: 21vw; 
+  }
 }
 
 @mixin fontTitleHeader() {

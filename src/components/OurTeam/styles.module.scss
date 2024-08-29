@@ -56,14 +56,6 @@
         margin-top: 3vw;
         @include fontTitleDec2();
         margin-bottom: 5vw;
-        text-shadow: 
-        /* Белая обводка */
-        -1px -1px 0 rgb(255, 176, 250),
-        /* Розовая тень */
-        0 0 30px rgba(221, 0, 255, .75), 
-        0 0 50px rgb(221, 0, 255), 
-        0 0 20px rgb(221, 0, 255), 
-        0 0 50px rgb(221, 0, 255);
       }
 
       .bg-line-one {
@@ -105,3 +97,9 @@
         z-index: 1;
       }
       
+
+  @media only screen and (max-width: 576px) {
+    .vertical-text {
+      top: 29vw;
+    }
+  }

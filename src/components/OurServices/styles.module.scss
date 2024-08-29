@@ -91,14 +91,6 @@
         margin-bottom: 4vw;
         margin-top: 2vw;
         @include fontTitleDec2();
-        text-shadow: 
-         /* Белая обводка */
-         -1px -1px 0 rgb(255, 176, 250),
-         /* Розовая тень */
-         0 0 30px rgba(221, 0, 255, .75), 
-         0 0 50px rgb(221, 0, 255), 
-         0 0 20px rgb(221, 0, 255), 
-         0 0 50px rgb(221, 0, 255);
 }
 
 
@@ -166,11 +158,15 @@
         width: 90%;
         margin: 0 auto;
     }
+
+    .ourServices__title {
+        margin-bottom: 9vw;
+    }
     .textWindow { 
         height: 17vw;
         width: 90%;
         padding-left: 8vw;
-        margin-bottom: 2vw;
+        margin-bottom: 3vw;
 
         &:hover {
             height: 20vw;

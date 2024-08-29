@@ -8,6 +8,7 @@
       border: none;
     @include fontTitleFormInfo();
     cursor: pointer;
+    z-index: 100;
 }
 
 @media only screen and (max-width: 576px) {
