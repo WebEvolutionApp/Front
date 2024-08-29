@@ -1,3 +1,4 @@
+import React, { useState } from 'react';
 import s from './styles.module.scss';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
@@ -7,8 +8,7 @@ import arrowDown from '../../assets/icons/prev-arrow.svg';
 
 import { teamArray } from './teamArray.data';
 
-import Slider from "react-slick";
-
+import Slider from 'react-slick';
 
 function NextArrow(props) {
   const { className, style, onClick } = props;
@@ -31,11 +31,14 @@ function PrevArrow(props) {
       style={{ ...style }}
       onClick={onClick}
     >
-      <img src={arrowDown} alt="Prev" className={s.arrowDown} /></div>
+      <img src={arrowDown} alt="Prev" className={s.arrowDown} />
+    </div>
   );
 }
 
 function TeamSlider({ onSlideChange }) {
+  const [activeSlide, setActiveSlide] = useState(0);
+
   const settings = {
     dots: false,
     infinite: true,
@@ -47,22 +50,22 @@ function TeamSlider({ onSlideChange }) {
     verticalSwiping: true,
     nextArrow: <NextArrow />,
     prevArrow: <PrevArrow />,
-    beforeChange: function(currentSlide, nextSlide) {
-      // console.log("before change", currentSlide, nextSlide);
+    beforeChange: function (currentSlide, nextSlide) {
+      setActiveSlide(nextSlide);
       if (onSlideChange) {
         onSlideChange(nextSlide);
       }
     },
-    afterChange: function(currentSlide) {
-      // console.log("after change", currentSlide);
-    }
   };
 
   return (
     <div className={s['slider-container']}>
       <Slider {...settings}>
-        {teamArray.map(slide => (
-          <div key={slide.id} className={s['slide']}>
+        {teamArray.map((slide, index) => (
+          <div
+            key={slide.id}
+            className={`${s['slide']} ${index === activeSlide ? s['active'] : ''}`}
+          >
             <img
               src={slide.image}
               alt={slide.name}

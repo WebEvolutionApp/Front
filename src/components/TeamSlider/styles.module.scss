@@ -11,10 +11,14 @@
   border-radius: 2vw;
   height: 11.5vw;
   backdrop-filter: blur(48px);
-  box-shadow: inset 0 0 68px 0 rgba(143, 1, 254, 0.5), inset 0 0 4px 0 #8f01fe;
+  box-shadow: inset 0 0 3vw 0 rgba(143, 1, 254, 0.5), inset 0 0 4px 0 #8f01fe;
   background: rgba(255, 255, 255, 0.06);
   overflow: hidden;
   margin-bottom: 2.2vw;
+
+  &.active {
+    box-shadow: inset 0 0 5vw 0 rgba(143, 1, 254, 0.9), inset 0 0 4px 0 #8f01fe;
+  }
 }
 
 .slide-image {
