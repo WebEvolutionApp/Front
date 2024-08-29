@@ -48,6 +48,7 @@
       .image-profile {
         position: absolute;
         bottom: 0;
+        z-index: 100;
       }
 
 
@@ -64,3 +65,43 @@
         0 0 20px rgb(221, 0, 255), 
         0 0 50px rgb(221, 0, 255);
       }
+
+      .bg-line-one {
+        position: absolute;
+        top: 13vw;
+        left: 6.1vw;
+        height: 57vw;
+      }
+
+      .bg-line-two {
+        position: absolute;
+        top: 28vw;
+        left: 30vw;
+        width: 20vw;
+      }
+
+      .bg-line-three {
+        position: absolute;
+        top: 28vw;
+        left: 80vw;
+        width: 20vw;
+      }
+
+      .bg-line-four {
+        position: absolute;
+        top: 15vw;
+        left: -80vw;
+        width: 115vw;
+      }
+
+      .vertical-text {
+        position: absolute;
+        top: 17vw;
+        left: 13vw;
+        writing-mode: vertical-rl;
+        transform: rotate(360deg); 
+        text-orientation: sideways;
+        @include fontTitleDecSlider();
+        z-index: 1;
+      }
+      

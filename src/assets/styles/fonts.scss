@@ -33,6 +33,20 @@
   color: $mainPink;
 }
 
+@mixin fontTitleDecSlider() {
+  @include VlaShu(12vw, 700, 120%);
+  text-transform: uppercase;
+  color: $mainViolet;
+  text-shadow: 
+  /* Белая обводка */
+  -1px -1px 0 rgb(197, 149, 255),
+  /* Розовая тень */
+  0 0 30px rgba(153, 0, 255, 0.75), 
+  0 0 50px rgb(132, 0, 255), 
+  0 0 20px rgb(136, 0, 255), 
+  0 0 50px rgb(115, 0, 255);
+}
+
 @mixin fontTitleHeader() {
   @include mulish(1.3vw, 400, 120%);
   color: $mainWhite;

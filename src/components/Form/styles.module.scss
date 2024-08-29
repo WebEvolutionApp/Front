@@ -94,53 +94,42 @@
 }
 .checkboxLabel {
   @include fontTitleFormInfo();
-  display: inline-flex;
+  display: flex;
   align-items: center;
   cursor: pointer;
   position: relative;
 }
 
 .checkbox {
-  position: absolute;
-  opacity: 0;
-  cursor: pointer;
+  display: none; 
 }
 
-.checkboxLabel::before {
-  content: "";
-  width: 2.8vw;
-  height: 2.8vw;
-  border-radius: 0.5vw;
-  background-color: transparent;
-  border: 1px solid #8d8d8d;
+.customCheckbox {
+  width: 20px;
+  height: 20px;
+  border: 2px solid rgba(150, 0, 255, 0.7);
+  border-radius: 4px;
   display: inline-block;
-  margin-right: 1vw;
-  transition: all 0.3s ease;
-  margin-right: 1vw;
+  margin-right: 10px;
+  position: relative;
+  transition: background-color 0.3s ease;
 }
 
-.checkboxLabel::after {
+.checkbox:checked + .customCheckbox::after {
   content: "";
-  width: 0.6vw;
-  height: 1.1vw;
-  border: solid $mainViolet;
-  border-width: 0 0.2vw 0.2vw 0;
-  display: inline-block;
   position: absolute;
-  top: 0.6vw;
-  left: 1vw;
+  left: 6px;
+  top: 2px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
   transform: rotate(45deg);
-  opacity: 1;
-  transition: opacity 0.3s ease;
+  background-color: rgba(150, 0, 255, 0.7);
 }
 
-.checkbox:checked + .checkboxLabel::before {
-  background-color: #1a1a1a;
-  border-color: #d400ff;
-}
-
-.checkbox:checked + .checkboxLabel::after {
-  opacity: 1;
+.checkboxLabel:hover .customCheckbox {
+  border-color: rgba(150, 0, 255, 0.9);
 }
 
 .formBtn {
@@ -234,4 +223,13 @@
     width: 110vw;
     left: -5vw;
   }
+}
+
+.error {
+  border-color: red;
+}
+
+.errorMessage {
+  color: red;
+  font-size: 0.8em;
 }
