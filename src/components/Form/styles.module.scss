@@ -127,7 +127,6 @@
   border: solid white;
   border-width: 0 2px 2px 0;
   transform: rotate(45deg);
-  background-color: rgba(150, 0, 255, 0.7);
 }
 
 .checkboxLabel:hover .customCheckbox {
@@ -183,10 +182,7 @@
 
   .checkboxLabel::before {
     content: "";
-    width: 6vw;
-    height: 6vw;
     border-radius: 0.9vw;
-    margin-right: 3vw;
   }
 
   .checkboxLabel::after {

@@ -33,8 +33,8 @@ export const Links = ({ menuStyle }) => {
       <li className={s['nav-item']}>
         <a 
           className={s['nav-link']} 
-          href="#about-us" 
-          onClick={(e) => handleScroll(e, 'about-us')}
+          href="#team" 
+          onClick={(e) => handleScroll(e, 'team')}
         >
           О нас
         </a>

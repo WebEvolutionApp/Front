@@ -3,6 +3,7 @@
     margin: 0 auto;
     height: 100px;
     position: relative;
+    height: 15vw;
 }
 
 .slide {
@@ -17,7 +18,7 @@
     -webkit-backdrop-filter: blur(10px); 
     @include fontTitleMainBtnMedia();
     text-align: center;
-    padding-top: 1.2vw;
+    padding-top: 1.6vw;
 }
 
 .prevArrow::before, .nextArrow::before {

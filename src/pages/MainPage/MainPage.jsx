@@ -11,7 +11,13 @@ import StagesOfWork from '../../components/StagesOfWork/StagesOfWork';
 import OurTeam from "../../components/OurTeam/OurTeam";
 import OurTeamMobile from "../../components/OurTeamMobile/OurTeamMobile";
 
-export const MainPage = () => {
+function MainPage() {
+  const handleScrollToTeam = () => {
+      if (teamRef.current) {
+          teamRef.current.scrollIntoView({ behavior: 'smooth' });
+      }
+  };
+  
   return (
     <>
       <Header />
