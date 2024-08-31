@@ -3,6 +3,8 @@ import { useState, useMemo } from "react";
 import { teamArray } from "../TeamSlider/teamArray.data";
 import s from "./styles.module.scss";
 import TextWindow from "../ui/TextWindow/TextWindow";
+import ellipse from "../../assets/images/Ellipse3.png";
+import ellipsePurple from "../../assets/images/Ellipse2.png";
 
 function OurTeamMobile() {
     const [currentSlide, setCurrentSlide] = useState(0);
@@ -10,6 +12,9 @@ function OurTeamMobile() {
 
     return (
         <div id="team" className={s.container}>
+            <img className={s.container__BgOne} src={ellipse} alt="" />
+            <img className={s.container__BgTwo} src={ellipse} alt="" />
+            <img className={s.container__BgThree} src={ellipsePurple} alt="" />
             <div className={s.content}>
                 <div className={s.title}>
                     Наша <br />

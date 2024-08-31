@@ -1,6 +1,28 @@
 .container {
     width: 100%;
     margin: 0 auto;
+    position: relative;
+
+    &__BgOne {
+        position: absolute;
+        bottom: -30vw;
+        left: -50vw;
+        width: 140vw;
+    }
+
+    &__BgTwo {
+        position: absolute;
+        bottom: 80vw;
+        left: 30vw;
+        width: 170vw;
+    }
+
+    &__BgThree {
+        position: absolute;
+        bottom: 100vw;
+        left: -60vw;
+        width: 120vw;
+    }
 }
 
 .content {

@@ -2,6 +2,9 @@ import React from 'react';
 import s from './styles.module.scss';
 import Button from '../ui/Button/Button';
 import animation from '../../assets/images/3d_done.gif'
+import ellipse from '../../assets/images/Ellipse2.png'
+import ellipseBlue from '../../assets/images/Ellipse3.png'
+
 
 function HeroSection() {
   const scrollToForm = () => {
@@ -14,6 +17,8 @@ function HeroSection() {
   return (
     <div className={s['container']}>
       <div className={s['content']}>
+      <img className={s['ellipse']} src={ellipse} />
+      <img className={s['ellipse-two']} src={ellipseBlue} />
         <div className={s['flex']}>
           <h1 className={s['heading']}>Изменим ваше представление <br /> о сайтах</h1>
           <Button text='Оставить заявку' onClick={scrollToForm} />

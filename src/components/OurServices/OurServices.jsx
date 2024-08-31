@@ -73,31 +73,64 @@ export function OurServices() {
           <div className={s.ourServices__sectionOne}>
             <TextWindow customClassName={s.textWindow}>
               <img className={s.ourServices__logo} src={infinite} alt="icon" />
-              &nbsp;Дизайн и разработка сайтов
+              &nbsp;Создание сайта
+              
+                {/* / составление структуры сайта
+                / создание пользовательского интерфейса
+                / создание дизайна сайта
+                / верстка сайта
+                / добавление администравной страницы
+                / добавить */}
+             
             </TextWindow>
             <TextWindow customClassName={s.textWindow}>
               <img className={s.ourServices__logo} src={infinite} alt="icon" />
-              &nbsp;Приложения
+              &nbsp; Создание приложения
+            {/*   / создание user flow
+/ создание пользовательского интерфейса
+/ создание дизайна приложения
+/ вертска приложения на android или ios
+/ добавить
+/ добавить */}
             </TextWindow>
           </div>
           <div className={s.ourServices__sectionTwo}>
             <TextWindow customClassName={s.textWindow}>
               <img className={s.ourServices__logo} src={infinite} alt="icon" />
-              &nbsp;Порталы и сервисы
+              &nbsp;Разработка
             </TextWindow>
           </div>
           <div className={s.ourServices__sectionThree}>
             <TextWindow customClassName={s.textWindow}>
               <img className={s.ourServices__logo} src={infinite} alt="icon" />
-              &nbsp;Логотипы
+              &nbsp;Дизайн
+             {/*  / айдентика
+/ логотип
+/ баннеры и постеры
+/ дизайн упаковки
+/ печатная продукция
+/ инфографика */}
             </TextWindow>
             <TextWindow customClassName={s.textWindow}>
               <img className={s.ourServices__logo} src={infinite} alt="icon" />
               &nbsp;SEO-продвижение
+              {/* / анализ конкурентов, сайта, выдачи
+/ оптимизация сайта
+/ наполнение сайта контентом
+/ проведение SEO-аудита сайта */}
             </TextWindow>
             <TextWindow customClassName={s.textWindow}>
               <img className={s.ourServices__logo} src={infinite} alt="icon" />
               &nbsp;Анимация
+             
+{/* / сайты и их элементы 
+(логотипы, иконки и тд)
+/ инфографика
+/ кинетическая типографика
+/ продуктовый ролик
+/ создание и анимирование 
+2д, 3д-персонажей */}
+
             </TextWindow>
           </div>
         </div>

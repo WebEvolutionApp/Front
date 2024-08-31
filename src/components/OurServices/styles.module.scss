@@ -5,6 +5,7 @@
     background-color: $mainBlack;
     position: relative;
     overflow: hidden;
+    padding-bottom: 5vw;
     
 
     &__BgOne {
@@ -154,6 +155,11 @@
   }
 
   @media only screen and (max-width: 576px) {
+
+    .ourServices__container {
+        padding-bottom: 20vw;
+    }
+    
     .ourServices__content {
         width: 90%;
         margin: 0 auto;
@@ -208,5 +214,36 @@
         width: 70vw;
         top: 70vw;
         left: -30vw;
+    }
+
+
+    .ourServices__container__BgLineOne {
+        top: -85vw;
+        left: 85vw;
+        height: 150vw;
+        z-index: 1;
+}
+
+.ourServices__container__BgLineTwo {
+    top: 100vw;
+    height: 130vw;
+    left: 70vw;
+    }
+
+    .ourServices__container__BgLineThree {
+        display: none;
+    }
+
+    .ourServices__container__BgLineFour {
+        display: none;
+    }
+
+    .ourServices__container__BgLineFive {
+        top: 167vw;
+        width: 340vw;
+    }
+
+    .ourServices__container__BgLineSix {
+        height: 147vw;
     }
   }

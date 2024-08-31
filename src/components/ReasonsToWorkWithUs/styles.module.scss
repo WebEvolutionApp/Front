@@ -57,6 +57,10 @@
         bottom: -2vw;
         z-index: 10;
     }
+    &__BgFour {
+      position: absolute;
+      display: none;
+  }
   }
 
   &__content {
@@ -234,4 +238,32 @@
     width: 120vw;
     top: 1vw;
 }
+
+.reasonsToWorkWithUs__container__BgFour {
+  display: block;
+  bottom: 6vw;
+  width: 80vw;
+  right: -10vw;
+}
+
+  .reasonsToWorkWithUs__container__BgLineOne {
+    height: 100vw;
+    top: 50vw;
+    left: 15vw;
   }
+
+  .reasonsToWorkWithUs__container__BgLineTwo {
+    top: 113vw;
+    width: 290vw;
+}
+
+.reasonsToWorkWithUs__container__BgLineThree {
+ top: 113vw;
+ height: 170vw;
+}
+
+.reasonsToWorkWithUs__container__BgLineFive {
+  display: none;
+}
+}
+  

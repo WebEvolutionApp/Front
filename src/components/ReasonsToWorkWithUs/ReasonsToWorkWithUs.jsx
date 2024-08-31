@@ -45,6 +45,7 @@ function ReasonsToWorkWithUs() {
       <img className={s.reasonsToWorkWithUs__container__BgOne} src={ellipseOne} alt="" />
       <img className={s.reasonsToWorkWithUs__container__BgTwo} src={ellipseTwo} alt="" />
       <img className={s.reasonsToWorkWithUs__container__BgThree} src={ellipseThree} alt="" />
+      <img className={s.reasonsToWorkWithUs__container__BgFour} src={ellipseTwo} alt="" />
       <div className={s.reasonsToWorkWithUs__content}>
         <div className={s.reasonsToWorkWithUs__mainSection}>
           <div className={s.reasonsToWorkWithUs__mainSection__title}>Причины сотрудничать с нами</div>
