@@ -4,6 +4,12 @@ import TextArea from "../ui/TextArea/TextArea";
 import FormButton from "../ui/FormButton/FormButton";
 import ellipseOne from "../../assets/images/Ellipse3.png";
 import ellipseTwo from "../../assets/images/Ellipse2.png";
+import verticalLine from "../../assets/images/LineThree.png";
+import lineOne from "../../assets/images/LineFour.png";
+import lineTwo from "../../assets/images/LineEight.png";
+import lineThree from "../../assets/images/LineSeven.png";
+import lineFour from "../../assets/images/LineTwo.png";
+
 
 export function Form() {
   const {
@@ -16,7 +22,6 @@ export function Form() {
     mode: "onBlur",
   });
 
-  // Смотрим за состоянием чекбокса
   const watchAgree = watch("agree", false);
 
   const onSubmit = (data) => {
@@ -26,6 +31,13 @@ export function Form() {
 
   return (
     <div id="form" className={s.form__container}>
+       <img className={s.form__container__BgLineOne} src={verticalLine} alt="" />
+      <img className={s.form__container__BgLineTwo} src={verticalLine} alt="" />
+      <img className={s.form__container__BgLineThree} src={lineOne} alt="" />
+      <img className={s.form__container__BgLineFour} src={lineTwo} alt="" />
+      <img className={s.form__container__BgLineFive} src={lineTwo} alt="" />
+      <img className={s.form__container__BgLineSix} src={lineThree} alt="" />
+      <img className={s.form__container__BgLineSeven} src={lineFour} alt="" />
       <img className={s.form__container__BgOne} src={ellipseOne} alt="" />
       <img className={s.form__container__BgTwo} src={ellipseTwo} alt="" />
       <img className={s.form__container__BgThree} src={ellipseOne} alt="" />
@@ -43,34 +55,35 @@ export function Form() {
               <div className={s.form__userInfo}>
                 <TextArea
                   placeholder="Имя*"
-                  customClassName={`${s.input} ${errors.name ? s.error : ""}`}
+                  customClassName={s.input}
                   name="name"
-                  {...register("name", { 
+                  error={!!errors.name}
+                  {...register("name", {
                     required: "Введите ваше имя",
                     maxLength: {
                       value: 30,
-                      message: "Слишком длинное имя"
+                      message: "Слишком длинное имя",
                     },
                     minLength: {
                       value: 2,
-                      message: "Слишком короткое имя"
-                    }
+                      message: "Слишком короткое имя",
+                    },
                   })}
                 />
-                
+
                 <TextArea
                   placeholder="E-mail*"
-                  customClassName={`${s.input} ${errors.email ? s.error : ""}`}
+                  customClassName={s.input}
                   name="email"
-                  {...register("email", { 
+                  error={!!errors.email}
+                  {...register("email", {
                     required: "Введите ваш email",
                     pattern: {
                       value: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
-                      message: "Введите корректный email"
-                    }
+                      message: "Введите корректный email",
+                    },
                   })}
                 />
-               
               </div>
               <TextArea
                 placeholder="Опишите вашу идею"
@@ -79,14 +92,14 @@ export function Form() {
                 }`}
                 name="description"
                 {...register("description", {
-                   required: false,
-                   maxLength: {
+                  required: false,
+                  maxLength: {
                     value: 1000,
-                    message: "Слишком длинное описание, максимальное количество символов - 1000"
+                    message:
+                      "Слишком длинное описание, максимальное количество символов - 1000",
                   },
                 })}
               />
-              
             </div>
             <div className={s.form__requiredFields}>
               * поля обязательные для заполнения
@@ -97,17 +110,15 @@ export function Form() {
                   type="checkbox"
                   className={s.checkbox}
                   {...register("agree", {
-                    required: "Необходимо согласие на обработку персональных данных"
+                    required:
+                      "Необходимо согласие на обработку персональных данных",
                   })}
                 />
                 <span className={s.customCheckbox}></span>
                 Согласие на обработку персональных данных
               </label>
             </div>
-            <FormButton
-              customClassName={s.formBtn}
-              type="submit"
-            >
+            <FormButton customClassName={s.formBtn} type="submit">
               Отправить
             </FormButton>
           </form>

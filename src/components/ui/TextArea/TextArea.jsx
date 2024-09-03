@@ -8,8 +8,9 @@ const TextArea = forwardRef(({
   width,
   height,
   maxLength,
-  value, // получаем значение извне
-  onChange, // получаем функцию изменения значения извне
+  value, 
+  onChange, 
+  error, 
   ...props
 }, ref) => {
   return (
@@ -18,7 +19,8 @@ const TextArea = forwardRef(({
       className={classNames(
         s.custom__textarea,
         customClassName,
-        { [s.filled]: value }
+        { [s.filled]: value },
+        { [s.error]: error } 
       )}
       style={{ width, height }}
       placeholder={placeholder}

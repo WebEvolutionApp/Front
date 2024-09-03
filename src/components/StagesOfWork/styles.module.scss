@@ -124,29 +124,30 @@
 
 .bg-line-one {
   position: absolute;
-  height: 55vw;
+  height: 80vw;
   right: -9vw;
+  top: -25vw;
 }
 
 .bg-line-two {
   position: absolute;
-  width: 70vw;
-  right: -16vw;
+  width: 110vw;
+  right: -50vw;
   top: 55vw;
   z-index: 100;
 }
 
 .bg-line-three {
   position: absolute;
-  width: 70vw;
-  left: -43vw;
+  width: 110vw;
+  left: -83vw;
   top: 59vw;
   z-index: 100;
 }
 
 .bg-line-four {
   position: absolute;
-  height: 40vw;
+  height: 45vw;
   left: 27vw;
   top: 53vw;
   z-index: 100;
@@ -154,7 +155,7 @@
 
 .bg-line-five {
   position: absolute;
-  height: 38vw;
+  height: 50vw;
   right: 10vw;
   top: 50vw;
   z-index: 100;

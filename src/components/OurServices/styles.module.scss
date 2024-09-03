@@ -35,17 +35,17 @@
 
     &__BgLineOne {
         position: absolute;
-        top: -1vw;
+        top: -10vw;
         left: 39vw;
-        height: 41vw;
+        height: 50vw;
         z-index: 1;
 }
 
     &__BgLineTwo {
         position: absolute;
-        top: -2vw;
+        top: -20vw;
         right: 22vw;
-        height: 41vw;
+        height: 55vw;
         z-index: 1;
     }
 
@@ -53,7 +53,7 @@
         position: absolute;
         top: 40vw;
         left: 39vw;
-        width: 85vw;
+        width: 120vw;
         z-index: 1;
     }
 
@@ -61,15 +61,15 @@
         position: absolute;
         top: 20vw;
         left: 57vw;
-        height: 35vw;
+        height: 60vw;
         z-index: 1;
     }
 
     &__BgLineFive {
         position: absolute;
         top: 20vw;
-        left: -5vw;
-        width: 80vw;
+        left: -35vw;
+        width: 120vw;
         z-index: 1;
     }
 
@@ -77,7 +77,7 @@
         position: absolute;
         top: 20vw;
         left: 15vw;
-        height: 50vw;
+        height: 55vw;
         z-index: 1;
     }
 }
@@ -123,23 +123,41 @@
 
 .textWindow {
     position: relative;
-    height: 7.5vw;
+    max-height: 7vw; 
     margin-bottom: 1.2vw;
     padding-top: 2vw;
-    padding-left: 6vw;
-    transition: height 0.3s ease; 
+    padding-left: 4vw;
+    padding-right: 0.5vw;
+    padding-bottom: 0.5vw;
     width: 100%;
     z-index: 100;
+    overflow: hidden; 
+    display: flex;
+    flex-direction: column;  
+    transition: max-height 0.6s ease, padding-bottom 0.4s ease; 
 
     &:hover {
-        height: 11vw;
+        max-height: 50vw; 
+        padding-bottom: 1vw; 
+        transition: max-height 2s ease;
     }
 }
+
+.ourServices__list {
+    @include fontTitleListServeces();
+    margin-top: 1vw;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6vw;
+    padding-left: 0.5vw;
+}
+
+
 
 .ourServices__logo {
     position: absolute;
     top: 2vw;
-    left: 3vw;
+    left: 1.5vw;
     width: 2vw;
 }
 
@@ -153,6 +171,8 @@
     display: block; 
     transform: translateX(-6vw);
   }
+
+  
 
   @media only screen and (max-width: 576px) {
 
@@ -168,16 +188,27 @@
     .ourServices__title {
         margin-bottom: 9vw;
     }
-    .textWindow { 
-        height: 17vw;
+
+    .textWindow {
+        max-height: 16vw; 
         width: 90%;
         padding-left: 8vw;
         margin-bottom: 3vw;
 
+      
         &:hover {
-            height: 20vw;
+          max-height: 140vw; 
         }
+      
     }
+
+    .ourServices__list {
+        @include fontTitleListServeces();
+        margin-top: 2vw;
+        padding-left: 1vw;
+        gap: 1.5vw;
+    }
+
     .ourServices__sectionOne {
         display: flex;
         flex-direction: column;

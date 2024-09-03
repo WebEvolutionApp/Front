@@ -23,6 +23,21 @@
         left: -60vw;
         width: 120vw;
     }
+
+    &__BgLineOne {
+        position: absolute;
+        bottom: -8vw;
+        right: -160vw;
+        width: 220vw;
+    }
+
+    &__BgLineTwo {
+        position: absolute;
+        bottom: -88vw;
+        right: 10vw;
+        height: 110vw;
+        z-index: 1;
+    }
 }
 
 .content {

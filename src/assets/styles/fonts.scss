@@ -72,7 +72,7 @@
 }
 
 @mixin fontTitleMain() {
-  @include mulish(1.5vw, 400, 120%);
+  @include mulish(1.5vw, 400, 130%);
   color: $mainWhite;
 }
 
@@ -140,4 +140,13 @@
 @mixin fontProcessStepTextMedia() {
   @include mulish(2.25vw, 400, 120%);
   color: $mainWhite;
+}
+
+@mixin fontTitleListServeces() {
+  @include mulish(1.3vw, 300, 120%);
+  color: $mainWhite;
+
+  @media (max-width: 576px) {
+    font-size: 3vw; 
+  }
 }

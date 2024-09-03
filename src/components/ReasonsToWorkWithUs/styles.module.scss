@@ -8,21 +8,22 @@
 
     &__BgLineOne {
         position: absolute;
-        height: 34vw;
+        height: 58vw;
         right: 40vw;
         z-index: 1;
+        top: -20vw;
     }
 
     &__BgLineTwo {
       position: absolute;
-      width: 97vw;
+      width: 170vw;
       top: 34vw;
       z-index: 1;
   }
 
   &__BgLineThree {
     position: absolute;
-    height: 55vw;
+    height: 90vw;
     right: 3vw;
     top: 24vw;
     z-index: 1;
@@ -33,6 +34,7 @@
   width: 13vw;
   left: 37vw;
   top: 22vw;
+  width: 25vw;
   z-index: 1;
 }
 
