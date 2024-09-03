@@ -10,7 +10,6 @@ import Footer from "../../components/Footer/Footer";
 import StagesOfWork from '../../components/StagesOfWork/StagesOfWork';
 import OurTeam from "../../components/OurTeam/OurTeam";
 import OurTeamMobile from "../../components/OurTeamMobile/OurTeamMobile";
-
 function MainPage() {
   const handleScrollToTeam = () => {
       if (teamRef.current) {

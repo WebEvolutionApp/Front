@@ -284,6 +284,27 @@
     @include fontTitleFormInfoMedia2();
     color: rgb(227, 0, 57);
   }
+
+  .form__container {
+    &__BgLineThree {
+      display: none;
+    }
+
+    &__BgLineFour {
+      display: none;
+    }
+
+    &__BgLineFive {
+      display: none;
+    }
+
+    &__BgLineSix {
+      display: none;
+    }
+    &__BgLineSeven {
+      display: none;
+    }
+  }
 }
 
 

@@ -9,7 +9,7 @@ import lineOne from "../../assets/images/LineFour.png";
 import lineTwo from "../../assets/images/LineEight.png";
 import lineThree from "../../assets/images/LineSeven.png";
 import lineFour from "../../assets/images/LineTwo.png";
-
+import axios from 'axios';
 
 export function Form() {
   const {
@@ -17,21 +17,49 @@ export function Form() {
     handleSubmit,
     formState: { errors },
     reset,
-    watch,
   } = useForm({
-    mode: "onBlur",
+    mode: 'onBlur',
   });
 
-  const watchAgree = watch("agree", false);
+  const onSubmit = async (data) => {
+    try {
+      // Создайте объект FormData
+      const formData = new FormData();
+      formData.append('name', data.name);
+      formData.append('email', data.email);
+      formData.append('description', data.description || ''); // Убедитесь, что описание может быть пустым
 
-  const onSubmit = (data) => {
-    console.log(data);
-    reset();
+      // Отправка данных на сервер
+      const response = await axios.post('http://localhost:8001/clients/add_client', formData, {
+        headers: {
+          'Content-Type': 'multipart/form-data'
+        }
+      });
+
+      console.log('Success:', response.data);
+      reset();  // Сброс формы после успешной отправки
+
+    } catch (error) {
+      console.error('There was an error sending the data!', error);
+
+      if (error.response) {
+        console.error('Server responded with:', error.response.data);
+
+        if (error.response.data && error.response.data.detail) {
+          const validationErrors = error.response.data.detail;
+          validationErrors.forEach(err => {
+            console.error(`Validation Error - Location: ${err.loc}, Message: ${err.msg}, Type: ${err.type}`);
+          });
+        }
+      } else {
+        console.error('Error message:', error.message);
+      }
+    }
   };
 
   return (
     <div id="form" className={s.form__container}>
-       <img className={s.form__container__BgLineOne} src={verticalLine} alt="" />
+      <img className={s.form__container__BgLineOne} src={verticalLine} alt="" />
       <img className={s.form__container__BgLineTwo} src={verticalLine} alt="" />
       <img className={s.form__container__BgLineThree} src={lineOne} alt="" />
       <img className={s.form__container__BgLineFour} src={lineTwo} alt="" />
@@ -110,8 +138,7 @@ export function Form() {
                   type="checkbox"
                   className={s.checkbox}
                   {...register("agree", {
-                    required:
-                      "Необходимо согласие на обработку персональных данных",
+                    required: "Необходимо согласие на обработку персональных данных",
                   })}
                 />
                 <span className={s.customCheckbox}></span>
