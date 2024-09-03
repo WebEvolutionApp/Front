@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useForm } from "react-hook-form";
 import s from "./styles.module.scss";
 import TextArea from "../ui/TextArea/TextArea";
 import FormButton from "../ui/FormButton/FormButton";
@@ -6,71 +6,22 @@ import ellipseOne from "../../assets/images/Ellipse3.png";
 import ellipseTwo from "../../assets/images/Ellipse2.png";
 
 export function Form() {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    description: "",
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+    reset,
+    watch,
+  } = useForm({
+    mode: "onBlur",
   });
 
-  const [isChecked, setIsChecked] = useState(false);
-  const [errors, setErrors] = useState({});
-  const [isSubmitted, setIsSubmitted] = useState(false);
+  // Смотрим за состоянием чекбокса
+  const watchAgree = watch("agree", false);
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({
-      ...formData,
-      [name]: value,
-    });
-
-    setErrors((prevErrors) => ({
-      ...prevErrors,
-      [name]: "",
-    }));
-  };
-
-  const validate = () => {
-    let errors = {};
-    let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-    if (!formData.name.trim()) {
-      errors.name = "Имя обязательно";
-    }
-    if (!formData.email.trim()) {
-      errors.email = "E-mail обязателен";
-    } else if (!emailPattern.test(formData.email)) {
-      errors.email = "Некорректный e-mail";
-    }
-    if (formData.description.length > 1000) {
-      errors.description = "Описание не должно превышать 1000 символов";
-    }
-    if (!isChecked) {
-      errors.checkbox = "Необходимо согласие на обработку данных";
-    }
-
-    console.log("Validation errors: ", errors); 
-    setErrors(errors);
-
-    return Object.keys(errors).length === 0;
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    if (validate()) {
-      alert("Ваша заявка принята, мы скоро свяжемся с вами");
-      setIsSubmitted(true);
-    } else {
-      console.log("Form data on submit: ", formData); 
-    }
-  };
-
-  const handleCheckboxChange = () => {
-    setIsChecked(!isChecked);
-
-    setErrors((prevErrors) => ({
-      ...prevErrors,
-      checkbox: "",
-    }));
+  const onSubmit = (data) => {
+    console.log(data);
+    reset();
   };
 
   return (
@@ -87,25 +38,37 @@ export function Form() {
           <div className={s.form__formTitle}>
             Оставить заявку на консультацию по созданию сайта
           </div>
-          <form onSubmit={handleSubmit}>
+          <form onSubmit={handleSubmit(onSubmit)}>
             <div className={s.form__inputsSection}>
               <div className={s.form__userInfo}>
                 <TextArea
                   placeholder="Имя*"
                   customClassName={`${s.input} ${errors.name ? s.error : ""}`}
-                  maxLength={100}
                   name="name"
-                  value={formData.name}
-                  onChange={handleChange}
+                  {...register("name", { 
+                    required: "Введите ваше имя",
+                    maxLength: {
+                      value: 30,
+                      message: "Слишком длинное имя"
+                    },
+                    minLength: {
+                      value: 2,
+                      message: "Слишком короткое имя"
+                    }
+                  })}
                 />
                 
                 <TextArea
                   placeholder="E-mail*"
                   customClassName={`${s.input} ${errors.email ? s.error : ""}`}
-                  maxLength={100}
                   name="email"
-                  value={formData.email}
-                  onChange={handleChange}
+                  {...register("email", { 
+                    required: "Введите ваш email",
+                    pattern: {
+                      value: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
+                      message: "Введите корректный email"
+                    }
+                  })}
                 />
                
               </div>
@@ -114,14 +77,16 @@ export function Form() {
                 customClassName={`${s.inputText} ${
                   errors.description ? s.error : ""
                 }`}
-                maxLength={1000}
                 name="description"
-                value={formData.description}
-                onChange={handleChange}
+                {...register("description", {
+                   required: false,
+                   maxLength: {
+                    value: 1000,
+                    message: "Слишком длинное описание, максимальное количество символов - 1000"
+                  },
+                })}
               />
-              {errors.description && (
-                <div className={s.errorMessage}>{errors.description}</div>
-              )}
+              
             </div>
             <div className={s.form__requiredFields}>
               * поля обязательные для заполнения
@@ -131,30 +96,30 @@ export function Form() {
                 <input
                   type="checkbox"
                   className={s.checkbox}
-                  checked={isChecked}
-                  onChange={handleCheckboxChange}
+                  {...register("agree", {
+                    required: "Необходимо согласие на обработку персональных данных"
+                  })}
                 />
                 <span className={s.customCheckbox}></span>
                 Согласие на обработку персональных данных
               </label>
-              {errors.checkbox && (
-                <div className={s.errorMessage}>{errors.checkbox}</div>
-              )}
             </div>
             <FormButton
               customClassName={s.formBtn}
               type="submit"
-              disabled={!isChecked || isSubmitted}
             >
               Отправить
             </FormButton>
-            {errors.name && (
-                  <div className={s.errorMessage}>{errors.name}</div>
-                )}
-                 {errors.email && (
-                  <div className={s.errorMessage}>{errors.email}</div>
-                )}
           </form>
+        </div>
+        <div className={s.form__requiredFieldsError}>
+          {errors?.name && <p>{errors?.name?.message || "Error!"}</p>}
+        </div>
+        <div className={s.form__requiredFieldsError}>
+          {errors?.email && <p>{errors?.email?.message || "Error!"}</p>}
+        </div>
+        <div className={s.form__requiredFieldsError}>
+          {errors?.agree && <p>{errors?.agree?.message || "Error!"}</p>}
         </div>
       </div>
     </div>
@@ -162,4 +127,3 @@ export function Form() {
 }
 
 export default Form;
-

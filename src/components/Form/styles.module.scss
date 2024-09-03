@@ -224,11 +224,6 @@
   }
 }
 
-.error {
-  border-color: red;
-}
-
-.errorMessage {
-  color: red;
-  font-size: 0.8em;
+.form__requiredFieldsError {
+  color: rgb(227, 0, 57);
 }
