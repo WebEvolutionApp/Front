@@ -8,7 +8,10 @@
       border: none;
     @include fontTitleFormInfo();
     cursor: pointer;
-    z-index: 100;
+
+    &:hover {
+      background: $mainViolet;
+    }
 }
 
 @media only screen and (max-width: 576px) {

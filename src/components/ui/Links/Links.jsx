@@ -2,9 +2,10 @@ import React from 'react';
 import s from './styles.module.scss';
 
 export const Links = ({ menuStyle }) => {
-  const handleScroll = (event, targetId) => {
-    event.preventDefault(); 
-    const targetElement = document.getElementById(targetId);
+  const handleScroll = (event, targetId, mobileTargetId) => {
+    event.preventDefault();
+    const isMobile = window.innerWidth <= 576; 
+    const targetElement = document.getElementById(isMobile ? mobileTargetId : targetId);
     if (targetElement) {
       targetElement.scrollIntoView({ behavior: 'smooth' });
     }
@@ -34,7 +35,7 @@ export const Links = ({ menuStyle }) => {
         <a 
           className={s['nav-link']} 
           href="#team" 
-          onClick={(e) => handleScroll(e, 'team')}
+          onClick={(e) => handleScroll(e, 'team', 'teamMobile')}
         >
           О нас
         </a>

@@ -23,13 +23,13 @@ export function Form() {
 
   const onSubmit = async (data) => {
     try {
-      // Создайте объект FormData
+   
       const formData = new FormData();
       formData.append('name', data.name);
       formData.append('email', data.email);
-      formData.append('description', data.description || ''); // Убедитесь, что описание может быть пустым
+      formData.append('description', data.description || ''); 
 
-      // Отправка данных на сервер
+
       const response = await axios.post('http://localhost:8001/clients/add_client', formData, {
         headers: {
           'Content-Type': 'multipart/form-data'
@@ -37,7 +37,7 @@ export function Form() {
       });
 
       console.log('Success:', response.data);
-      reset();  // Сброс формы после успешной отправки
+      reset();  
 
     } catch (error) {
       console.error('There was an error sending the data!', error);
@@ -88,6 +88,11 @@ export function Form() {
                   error={!!errors.name}
                   {...register("name", {
                     required: "Введите ваше имя",
+                    pattern: {
+                      value: /^[a-zA-Zа-яА-ЯёЁ]+(?: [a-zA-Zа-яА-ЯёЁ]+)*$/,
+                      message: "Введите корректное имя",
+                    },
+                    
                     maxLength: {
                       value: 30,
                       message: "Слишком длинное имя",
