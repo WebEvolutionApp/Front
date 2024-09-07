@@ -107,6 +107,11 @@
   color: $mainWhite;
 }
 
+@mixin fontTitleTeamInfoMedia() {
+  @include mulish(3.3vw, 300, 120%);
+  color: $mainWhite;
+}
+
 @mixin fontTitleFormMedia() {
   @include mulish(2.1vw, 600, 160%);
   color: $mainWhite;

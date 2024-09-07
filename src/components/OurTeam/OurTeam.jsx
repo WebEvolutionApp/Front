@@ -2,7 +2,7 @@ import TeamSlider from "../TeamSlider/TeamSlider";
 
 import { useState, useMemo } from "react";
 
-import { teamArray } from "../../components/TeamSlider/teamArray.data";
+import { teamArray } from "../TeamSlider/teamArray.data"; 
 
 import s from "./styles.module.scss";
 import lineOne from "../../assets/images/LineOne.png";
@@ -26,13 +26,13 @@ function OurTeam() {
         </div>
         <div className={s["team-info"]}>
           <TeamSlider onSlideChange={setCurrentSlide} />
-          <div key={slide.id} className={s["info-team"]}>
+          <div key={slide.id} className={s["team-data"]}>
             <div className={s["img-block"]}>
               <img
                 src={slide.image}
                 alt={slide.name}
                 className={s["image-profile"]}
-                style={{ height: "30vw" }}
+
               />
             </div>
             <div className={s["info-block"]}>

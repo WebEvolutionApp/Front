@@ -6,7 +6,7 @@ import 'slick-carousel/slick/slick-theme.css';
 import arrowUp from '../../assets/icons/next-arrow.svg';
 import arrowDown from '../../assets/icons/prev-arrow.svg';
 
-import { teamArray } from './teamArray.data';
+import { teamArray } from './teamArray.data'; 
 
 import Slider from 'react-slick';
 

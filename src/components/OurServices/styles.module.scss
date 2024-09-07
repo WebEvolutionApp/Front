@@ -145,6 +145,7 @@
 
 .ourServices__list {
     @include fontTitleListServeces();
+    color: rgb(197, 197, 197);
     margin-top: 1vw;
     display: flex;
     flex-direction: column;

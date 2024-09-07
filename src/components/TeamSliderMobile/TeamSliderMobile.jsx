@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import s from './styles.module.scss';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import { teamArray } from '../TeamSlider/teamArray.data';
+import { teamArrayMobile } from './teamArrayMobile.data'; 
 import Slider from 'react-slick';
 import arrowNext from '../../assets/icons/next-arrow-mob.svg';
 import arrowPrev from '../../assets/icons/prev-arrow-mob.svg';
@@ -57,7 +57,7 @@ export function TeamSliderMobile({ onSlideChange }) {
     return (
         <div className={s.sliderContainer}>
             <Slider {...settings}>
-                {teamArray.map((slide, index) => (
+                {teamArrayMobile.map((slide, index) => (
                     <div
                         key={slide.id}
                         className={`${s.slide} ${index === activeSlide ? s.active : ''}`}

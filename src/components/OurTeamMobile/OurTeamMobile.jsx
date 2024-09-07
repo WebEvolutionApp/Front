@@ -1,6 +1,6 @@
 import React, { useState, useMemo } from "react";
 import TeamSliderMobile from "../TeamSliderMobile/TeamSliderMobile"; 
-import { teamArray } from "../TeamSlider/teamArray.data";
+import { teamArrayMobile } from "../TeamSliderMobile/teamArrayMobile.data"; 
 import s from "./styles.module.scss";
 import TextWindow from "../ui/TextWindow/TextWindow";
 import ellipse from "../../assets/images/Ellipse3.png";
@@ -9,7 +9,7 @@ import orizontalLine from "../../assets/images/LineSix.png";
 
 function OurTeamMobile() {
     const [currentSlide, setCurrentSlide] = useState(0);
-    const slide = useMemo(() => teamArray[currentSlide], [currentSlide]);
+    const slide = useMemo(() => teamArrayMobile[currentSlide], [currentSlide]);
 
     return (
         <div id="teamMobile" className={s.container}>

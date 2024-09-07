@@ -65,11 +65,6 @@
 }
 
 
-
-.infoTeam__text {
-    @include fontTitleMain();
-}
-
 .title {
     @include fontTitleDec2();
     margin-bottom: 9vw;
@@ -81,6 +76,6 @@
 
     &__text {
         padding: 3vw 7vw 3vw 7vw;
-        @include fontTitleMainMedia();
+        @include fontTitleTeamInfoMedia();
     }
 }

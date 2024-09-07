@@ -15,13 +15,17 @@
 
   .team-info {
     display: flex;
+    width: 100%;
     flex-wrap: nowrap;
     justify-content: space-between;
   }
 
+  .image-profile {
+    height: 29vw;
+  }
 
-    .info-team {
-      width: 52vw;
+    .team-data {
+
       display: flex;
       flex-wrap: nowrap;
       justify-content: space-between;
@@ -32,22 +36,25 @@
       }
 
       .info-team__text {
-        width: 24vw;
+        width: 26vw;
         @include fontTitleHeader();
+        font-size: 1.5vw;
       }
     
       .info-block {
         padding-top: 5vw;
+        width: 50%;
       }
 
       .img-block {
         padding-top: 15vw;
-        position: relative;
+        display: flex;
+        flex-direction: row;
+        align-items: end;
+        margin-right: 2vw;
       }
 
       .image-profile {
-        position: absolute;
-        bottom: 0;
         z-index: 100;
       }
 
@@ -55,27 +62,27 @@
       .title {
         margin-top: 3vw;
         @include fontTitleDec2();
-        margin-bottom: 5vw;
+        margin-bottom: 10vw;
       }
 
       .bg-line-one {
         position: absolute;
         top: 13vw;
         left: 6.1vw;
-        height: 57vw;
+        height: 61vw;
       }
 
       .bg-line-two {
         position: absolute;
-        top: 28vw;
+        top: 33vw;
         left: 30vw;
-        width: 20vw;
+        width: 19vw;
       }
 
       .bg-line-three {
         position: absolute;
-        top: 28vw;
-        left: 80vw;
+        top: 33vw;
+        left: 70vw;
         width: 20vw;
       }
 
